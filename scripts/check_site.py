@@ -49,7 +49,7 @@ for lang in ['']:
  assert all(f'<a id="{c["id"]}"></a>' in readme for c in json.loads((R/'data/taxonomy.json').read_text())['categories']),'Missing category anchor'
  assert not any(s in readme for s in ['Start here: three reading paths','A research desk in your browser','The paper index','Contributing and maintaining','README.zh-CN','assets/banner','assets/stats','Implementation watch','Reference status','🔗 **Links:**']),'Removed section was restored'
  assert '](assets/memory-map.svg)' in readme,'Missing requested four-quadrant map'
- assert '[Website](' in readme and '## 🔭 Pre-publication Methods' in readme,'Missing requested entry points'
+ assert '[interactive website](' in readme and '## 🔭 Pre-publication Methods' in readme,'Missing requested entry points'
  assert not re.search(r'img\.shields\.io/github/stars/[^\s)]+/XPolicyLab',readme,re.I),'Benchmark fork stars must not represent a method'
  assert len(re.findall(r'^\| \[[^\]]+\]\(https://',readme,re.M))==len(records),'Each public method must appear once in README'
 assert not (R/'README.zh-CN.md').exists() and not (site/'resources/README.zh-CN.md').exists(),'Retired translated README restored'

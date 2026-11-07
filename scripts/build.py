@@ -34,9 +34,8 @@ def publication(p,l='en'):
 def build_readme(papers,impl,tax,meta,project,paths,l='en'):
  out=[];put=out.append;web=project.get('website_url') or 'website/index.html'
  put('# Awesome-Embodied-Memory\n\n**Remember the world. Carry the past. Act on experience.**\n')
- put(f'🌐 [Website]({web})\n')
  put('An open map of memory in **World Models & WAM, VLA, and Agentic Robotics**. Find the system first, then the mechanism that carries its history into prediction or action.\n')
- put(f'For more detail, search and explore our [interactive website]({web}), which we will continue to update.\n')
+ put(f'For more detail, search and explore our 🌐 [interactive website]({web}), which we will continue to update.\n')
  put('<a id="memory-map"></a>\n\n## 🧭 The embodied memory map\n')
  put(f'[![Four perspectives on embodied memory: WAM, VLA, Agentic Robotics and Supporting Foundations](assets/memory-map.svg)]({web})\n')
  put('| Domain | The memory question | Method families | Papers & reports |\n|:---|:---|:---|---:|')
@@ -77,8 +76,6 @@ def build_readme(papers,impl,tax,meta,project,paths,l='en'):
   put('| Method | Link | TL;DR |\n|:---|:---:|:---|')
   for p in rows:put(f'| [{cell(p["title"])}]({p["url"]}) | {resource_badges(p)} | {cell(p.get("tldr_en") or p["summary_en"])} |')
   put('')
- put('---\n')
- put(f'**Sources & licenses:** {len(papers)} papers and reports; review depth is shown per record on the website. [Evidence policy](docs/methodology.md) · [Acknowledgements](docs/acknowledgements.md) · Content [CC BY 4.0](LICENSE-CONTENT) / code [MIT](LICENSE-CODE). AI-assisted curation; no model experiments rerun.')
  return '\n'.join(out)+'\n'
 def public_catalogue(papers,impl):
  # Keep every source audit in canonical JSON; fold paper-backed deployments into their paper's details.

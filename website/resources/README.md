@@ -2,11 +2,9 @@
 
 **Remember the world. Carry the past. Act on experience.**
 
-🌐 [Website](https://iron-lyk.github.io/Awesome-Embodied-Memory/)
-
 An open map of memory in **World Models & WAM, VLA, and Agentic Robotics**. Find the system first, then the mechanism that carries its history into prediction or action.
 
-For more detail, search and explore our [interactive website](https://iron-lyk.github.io/Awesome-Embodied-Memory/), which we will continue to update.
+For more detail, search and explore our 🌐 [interactive website](https://iron-lyk.github.io/Awesome-Embodied-Memory/), which we will continue to update.
 
 <a id="memory-map"></a>
 
@@ -989,6 +987,3 @@ The following methods were surveyed from benchmark submissions, including [RoboD
 | [HWM-0 Preview](https://github.com/Antu3heng/XPolicyLab/blob/1ddc01bd90396ef37f8345697caf5b7c0fd882d9/policy/HWM_0_preview/hwm/model/memory.py#L68-L80) | [![Code](../assets/link-code.svg)](https://github.com/Antu3heng/XPolicyLab/blob/1ddc01bd90396ef37f8345697caf5b7c0fd882d9/policy/HWM_0_preview/hwm/model/memory.py#L68-L80) | Combines compressed visual history with gated text-memory and subtask updates for hierarchical world-action control. |
 | [Liber-0 Preview](https://github.com/XPolicyLab/XPolicyLab/blob/6baccd57ff958570d0db1588370289ee36c8bb70/policy/Liber_0_preview/generation.py#L186-L213) | [![Code](../assets/link-code.svg)](https://github.com/XPolicyLab/XPolicyLab/blob/6baccd57ff958570d0db1588370289ee36c8bb70/policy/Liber_0_preview/generation.py#L186-L213) | Maintains a plan and past-subtask list, passing the active instruction and a persistent visual cue to the low-level policy. |
 
----
-
-**Sources & licenses:** 640 papers and reports; review depth is shown per record on the website. [Evidence policy](methodology.md) · [Acknowledgements](acknowledgements.md) · Content [CC BY 4.0](LICENSE-CONTENT) / code [MIT](LICENSE-CODE). AI-assisted curation; no model experiments rerun.
