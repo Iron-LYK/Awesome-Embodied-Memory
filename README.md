@@ -4,7 +4,7 @@
 
 An open map of memory in **World Models & WAM, VLA, and Agentic Robotics**. Find the system first, then the mechanism that carries its history into prediction or action.
 
-For more detail, search and explore our 🌐 [interactive website](https://iron-lyk.github.io/Awesome-Embodied-Memory/), which we will continue to update.
+**For more detail**, search and explore our 🌐 [interactive website](https://iron-lyk.github.io/Awesome-Embodied-Memory/), which we will continue to update.
 
 <a id="memory-map"></a>
 
