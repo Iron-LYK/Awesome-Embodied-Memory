@@ -1,0 +1,16 @@
+{
+  "checked_on": "2026-11-07",
+  "research_works": 639,
+  "bilingual_tldr": 639,
+  "author_code_links_inspected": 241,
+  "displayed_code_links": 219,
+  "displayed_project_links": 267,
+  "suppressed_code_links": 22,
+  "suppression_scope": "18 confirmed non-implementation, empty, placeholder, webpage-only or mismatched links; 4 unreachable links retained in provenance without classifying the repositories as empty.",
+  "author_reported_paper_venues": 167,
+  "venue_workshop_labels": 15,
+  "technical_report_labels": 4,
+  "venue_scope": "Author arXiv comments/journal metadata or author repository; not independent verification of every publisher record.",
+  "date_scope": "First public arXiv/report record, not conference publication date.",
+  "code_scope": "README and default-branch listing or pinned report source inspected; no installation, execution or performance replication."
+}

@@ -1,0 +1,11 @@
+"""Header-matched line-art robot for the taxonomy map (self-contained SVG)."""
+
+def robot_svg(prefix='memory-robot', width=140, height=140):
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 40 40" role="img" aria-label="Embodied memory robot">
+<g fill="none" stroke="#f0f0e9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+ <rect x="7" y="11" width="26" height="23" rx="8"/>
+ <path d="M20 11V6M7 20H3v7h4m26-7h4v7h-4M14 27q6 5 12 0"/>
+ <circle cx="20" cy="4" r="2"/>
+ <rect x="13" y="18" width="3" height="5" rx="1.5" fill="#f0f0e9" stroke="none"/>
+ <rect x="24" y="18" width="3" height="5" rx="1.5" fill="#f0f0e9" stroke="none"/>
+</g></svg>'''

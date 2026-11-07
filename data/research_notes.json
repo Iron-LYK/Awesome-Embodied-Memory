@@ -1,0 +1,149 @@
+[
+  {
+    "title": "存在 ≠ 启用 ≠ 被消费",
+    "body": "检查源码能力、发布配置、状态寿命和下游消费者。关闭一个命名模块不等于移除了所有历史通道。",
+    "ids": [
+      "impl-phoenix",
+      "impl-duoflow",
+      "impl-hexashell",
+      "impl-harness"
+    ],
+    "title_zh": "存在 ≠ 启用 ≠ 被消费",
+    "body_zh": "检查源码能力、发布配置、状态寿命和下游消费者。关闭一个命名模块不等于移除了所有历史通道。",
+    "title_en": "Available is not enabled; enabled is not consumed.",
+    "body_en": "Inspect source capability, release configuration, state lifetime and the downstream consumer. Disabling one named module does not remove every historical channel."
+  },
+  {
+    "title": "观测证据与预测计划",
+    "body": "WorldLA、RAP 的旧计划延续保存的是尚未执行的意图。评测要分开测量动作连续性和早期事实保留。",
+    "ids": [
+      "impl-worldla",
+      "impl-rap",
+      "impl-duoflow"
+    ],
+    "title_zh": "观测证据与预测计划",
+    "body_zh": "WorldLA、RAP 的旧计划延续保存的是尚未执行的意图。评测要分开测量动作连续性和早期事实保留。",
+    "title_en": "Evidence and intended action have different lifetimes.",
+    "body_en": "WorldLA and RAP retain unexecuted intentions through plan continuation. Evaluate action continuity separately from retention of early observed facts."
+  },
+  {
+    "title": "跨策略交接的状态缺口",
+    "body": "GO-3 的程序知道阶段和失败历史，但这些信息没有自动进入 WAM。应对照当前输入、原始日志、类型化状态三种交接。",
+    "ids": [
+      "impl-goagent"
+    ],
+    "title_zh": "跨策略交接的状态缺口",
+    "body_zh": "GO-3 的程序知道阶段和失败历史，但这些信息没有自动进入 WAM。应对照当前输入、原始日志、类型化状态三种交接。",
+    "title_en": "Memory can disappear at a policy handoff.",
+    "body_en": "GO-3 program state contains phase and failure history, but these do not automatically enter the WAM. Compare current-input-only, raw-log and typed-state handoffs."
+  },
+  {
+    "title": "记忆的存活时间需要测量",
+    "body": "G07 的峰值缓存容量不等于重置后的可用历史；HWM 的追加字符串不等于已撤销过期事实。",
+    "ids": [
+      "impl-g07",
+      "impl-hwm"
+    ],
+    "title_zh": "记忆的存活时间需要测量",
+    "body_zh": "G07 的峰值缓存容量不等于重置后的可用历史；HWM 的追加字符串不等于已撤销过期事实。",
+    "title_en": "Measure how long a memory survives.",
+    "body_en": "G07 peak cache capacity does not describe available history after a reset. HWM append-only strings do not by themselves revoke outdated facts."
+  },
+  {
+    "title": "开发经验也有来源",
+    "body": "PyRUA-RSI 与 HexaShell 将开发经验固化为程序和笔记。无梯度更新不等于无经验；冻结不自动保证独立评测。",
+    "ids": [
+      "2610.23479",
+      "impl-pyrsi",
+      "impl-mibot"
+    ],
+    "title_zh": "开发经验也有来源",
+    "body_zh": "PyRUA-RSI 与 HexaShell 将开发经验固化为程序和笔记。无梯度更新不等于无经验；冻结不自动保证独立评测。",
+    "title_en": "Development experience has provenance too.",
+    "body_en": "PyRUA-RSI and HexaShell consolidate development experience into programs and notes. No gradient update does not mean no experience, and freezing alone does not establish independent evaluation."
+  },
+  {
+    "title": "时间索引是输入语义",
+    "body": "用原生控制步、相机和真实执行回执解释采样间隔。可配置偏移与文字时间标签需要联合核验。",
+    "ids": [
+      "impl-simate",
+      "impl-cogact",
+      "impl-awomo",
+      "impl-rex"
+    ],
+    "title_zh": "时间索引是输入语义",
+    "body_zh": "用原生控制步、相机和真实执行回执解释采样间隔。可配置偏移与文字时间标签需要联合核验。",
+    "title_en": "A time index is part of the evidence.",
+    "body_en": "Interpret sampling intervals using native control steps, cameras and actual execution receipts. Configurable offsets and textual time labels need to be checked together."
+  },
+  {
+    "title_en": "A write should mean something happened.",
+    "title_zh": "写入应对应真实发生的事",
+    "body_en": "AGM and EventSync connect progress writes to completion evidence; REMM introduces retractable dependency-aware memory. A useful comparison holds capacity fixed and tests incorrect completion writes, stale facts and recovery cost.",
+    "body_zh": "AGM 与 EventSync 将进度写入连接到完成证据；REMM 引入可撤回的依赖记忆。值得在相同容量下比较错误完成写入、过期事实和纠错成本。",
+    "ids": [
+      "2608.29537",
+      "2610.27917",
+      "2610.12710"
+    ]
+  },
+  {
+    "title_en": "Memory belongs at more than one timescale.",
+    "title_zh": "记忆需要落在不同时间尺度",
+    "body_en": "Ledger separates policy perception from an external object-event ledger; HiMe separates execution, monitoring and planning rates. Compare where evidence lives and how it crosses interfaces, as well as the number of tokens retained.",
+    "body_zh": "Ledger 将策略感知与外部对象事件账本分开；HiMe 区分执行、监测和规划频率。除了 token 数量，还应比较证据保存在哪里，以及如何跨接口传递。",
+    "ids": [
+      "2609.34554",
+      "2607.03449",
+      "2607.08448"
+    ]
+  },
+  {
+    "title_en": "Diagnose before consolidating a failure.",
+    "title_zh": "先判断失败原因，再固化经验",
+    "body_en": "EmbodiSkill, EnactOpt and AdaRSI motivate different update targets: skill content, context construction, scheduling or executor capability. A failed attempt should not automatically become a permanent rule; test attribution before measuring accumulated memory.",
+    "body_zh": "EmbodiSkill、EnactOpt 与 AdaRSI 提示不同更新对象：技能内容、上下文构造、调度或执行器能力。一次失败不宜自动变成永久规则，应先检验归因，再衡量经验积累。",
+    "ids": [
+      "2605.10332",
+      "2610.14977",
+      "2610.20474"
+    ]
+  },
+  {
+    "title": "Separate memory content, encoding and consumer.",
+    "title_en": "Separate memory content, encoding and consumer.",
+    "title_zh": "分开描述记忆内容、编码方式与读取者。",
+    "body": "A sampled window, a pooled token grid, and a planner summary describe different design axes. Multiple modalities or scales can coexist within one domain-method home.",
+    "body_en": "A sampled window, a pooled token grid, and a planner summary describe different design axes. Multiple modalities or scales can coexist within one domain-method home.",
+    "body_zh": "采样窗口、池化 token 网格和规划摘要属于不同设计轴；多模态与多尺度可以共存于同一个领域与方法归属中。",
+    "ids": [
+      "2610.40748",
+      "impl-dm05",
+      "impl-hwm"
+    ]
+  },
+  {
+    "title": "A subtask label is not proof of completion.",
+    "title_en": "A subtask label is not proof of completion.",
+    "title_zh": "子任务标签不等于已完成事实。",
+    "body": "Liber-0 Preview records prior subtask instructions on transitions. Separate intended steps, observed outcomes and corrected facts when designing planner-to-policy memory.",
+    "body_en": "Liber-0 Preview records prior subtask instructions on transitions. Separate intended steps, observed outcomes and corrected facts when designing planner-to-policy memory.",
+    "body_zh": "Liber-0 Preview 在切换时记录过去子任务指令；设计规划器到策略的记忆时，应分开计划步骤、真实结果与更正事实。",
+    "ids": [
+      "impl-liber-preview",
+      "impl-hwm"
+    ]
+  },
+  {
+    "title": "Compare memory under matched budgets.",
+    "title_en": "Compare memory under matched budgets.",
+    "title_zh": "在相同预算下比较记忆。",
+    "body": "WorldBridge provides sequential memory ablations; Long-WAM links context benefits to pretraining. Different leaderboard totals do not isolate the effect of memory.",
+    "body_en": "WorldBridge provides sequential memory ablations; Long-WAM links context benefits to pretraining. Different leaderboard totals do not isolate the effect of memory.",
+    "body_zh": "WorldBridge 提供逐项加入记忆的消融，Long-WAM 将上下文收益与预训练关联；不同榜单总分不能隔离记忆的贡献。",
+    "ids": [
+      "2610.40748",
+      "2610.10528"
+    ]
+  }
+]

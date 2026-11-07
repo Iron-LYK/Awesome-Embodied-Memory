@@ -1,0 +1,101 @@
+[
+  {
+    "domain": "world-models",
+    "title_en": "Remember a world",
+    "title_zh": "记住一个世界",
+    "description_en": "From latent dynamics to long-context world-action models, then test what remains out of view.",
+    "description_zh": "从潜在动力学走向长上下文世界动作模型，再检验视野之外是否仍保有正确状态。",
+    "steps": [
+      {
+        "id": "1803.10122",
+        "short_title": "World Models",
+        "reason_en": "Start with a compact recurrent model of environmental dynamics.",
+        "reason_zh": "从环境动力学的紧凑递归表示出发。"
+      },
+      {
+        "id": "1912.01603",
+        "short_title": "Dreamer",
+        "reason_en": "Separate latent imagination for control from stored episodic evidence.",
+        "reason_zh": "区分服务控制的潜在想象与保存的情景证据。"
+      },
+      {
+        "id": "2610.10528",
+        "short_title": "Long-WAM",
+        "reason_en": "Examine how context is scaled at the world-action interface.",
+        "reason_zh": "观察世界与动作接口如何扩展上下文。"
+      },
+      {
+        "id": "2603.13215",
+        "short_title": "STEVO-Bench",
+        "reason_en": "Ask whether unseen state continues to evolve correctly.",
+        "reason_zh": "追问不可见状态是否继续正确演化。"
+      }
+    ]
+  },
+  {
+    "domain": "vla",
+    "title_en": "Act with useful history",
+    "title_zh": "用有用的历史行动",
+    "description_en": "Compare what a policy stores, how it reads, and whether a task actually needs that information.",
+    "description_zh": "比较策略保存什么、如何读取，以及任务是否真正依赖这些信息。",
+    "steps": [
+      {
+        "id": "2508.19236",
+        "short_title": "MemoryVLA",
+        "reason_en": "Inspect perceptual and cognitive memory in an action policy.",
+        "reason_zh": "理解动作策略中的感知与认知记忆。"
+      },
+      {
+        "id": "2603.12942",
+        "short_title": "ReMem-VLA",
+        "reason_en": "Contrast recurrent queries with explicit historical inputs.",
+        "reason_zh": "对比递归查询与显式历史输入。"
+      },
+      {
+        "id": "2602.21013",
+        "short_title": "Notes-to-Self",
+        "reason_en": "Look at language scratchpads as a policy memory interface.",
+        "reason_zh": "把语言草稿视作策略记忆接口。"
+      },
+      {
+        "id": "2603.01229",
+        "short_title": "RMBench",
+        "reason_en": "Check whether controlled tasks expose dependence on past evidence.",
+        "reason_zh": "检查受控任务能否揭示对过去证据的依赖。"
+      }
+    ]
+  },
+  {
+    "domain": "agentic-robotics",
+    "title_en": "Give an agent experience",
+    "title_zh": "让智能体积累经历",
+    "description_en": "Connect spatial facts, reusable procedures and runtime state; examine where knowledge stops flowing.",
+    "description_zh": "连接空间事实、可复用程序与运行时状态，并检查知识在哪个接口停止流动。",
+    "steps": [
+      {
+        "id": "2409.13682",
+        "short_title": "ReMEmbR",
+        "reason_en": "Follow the path from retained observations to navigation decisions.",
+        "reason_zh": "追踪保留观测如何进入导航决策。"
+      },
+      {
+        "id": "2305.16291",
+        "short_title": "Voyager",
+        "reason_en": "Study the lifecycle of an executable skill library.",
+        "reason_zh": "研究可执行技能库的生命周期。"
+      },
+      {
+        "id": "2610.23479",
+        "short_title": "HexaShell",
+        "reason_en": "Separate conversation history, program state and environment memory.",
+        "reason_zh": "区分对话历史、程序状态与环境记忆。"
+      },
+      {
+        "id": "2609.11308",
+        "short_title": "2AM",
+        "reason_en": "Examine how agent-side memory reaches an action model.",
+        "reason_zh": "查看 agent 侧记忆如何到达动作模型。"
+      }
+    ]
+  }
+]

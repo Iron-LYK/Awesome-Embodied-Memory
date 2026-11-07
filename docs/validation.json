@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "research_works": 640,
+  "implementation_records": 34,
+  "pending_references": 22,
+  "primary_domains": {
+    "foundations": 44,
+    "agentic-robotics": 157,
+    "world-models": 236,
+    "vla": 203
+  },
+  "roles": {
+    "context": 148,
+    "primary": 486,
+    "survey": 6
+  },
+  "method_families": 24,
+  "checks": [
+    "IDs/titles/DOIs deduplicated",
+    "bilingual annotations",
+    "hierarchy and mechanism tags",
+    "primary-source links/hashes",
+    "date and review-depth presence",
+    "BibTeX/placeholders",
+    "private-path exclusion",
+    "reading-path links"
+  ],
+  "scope": "Structural/content-contract checks, not independent full-paper replication."
+}

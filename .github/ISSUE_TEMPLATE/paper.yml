@@ -1,0 +1,47 @@
+name: Add a paper / 新增论文
+description: Suggest a source-backed embodied-memory work / 提供有来源的具身记忆工作
+title: "[Paper] "
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Exact title / 准确标题
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Primary source / 原始来源
+      description: arXiv, DOI, proceedings or an official report; include the inspected version.
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Primary domain / 主要领域
+      options:
+        - World Models & WAM
+        - VLA
+        - Agentic Robotics
+        - Supporting Foundations
+    validations:
+      required: true
+  - type: textarea
+    id: memory
+    attributes:
+      label: What is retained, for how long, and who consumes it? / 保存什么、多久、由谁消费？
+      description: Identify the mechanism and a section, figure or abstract passage. State what you actually read.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Short summary and boundary / 简介与边界
+      description: English and Chinese are welcome. Do not paste the full author abstract.
+  - type: checkboxes
+    id: duplicates
+    attributes:
+      label: Checks / 检查
+      options:
+        - label: I checked the ID, DOI and title for duplicates / 已按 ID、DOI 和标题查重
+          required: true

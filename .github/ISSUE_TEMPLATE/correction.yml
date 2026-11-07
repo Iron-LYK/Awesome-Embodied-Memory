@@ -1,0 +1,17 @@
+name: Correct an entry / 修正文献条目
+description: Report a source, classification, translation or evidence error
+title: "[Correction] "
+body:
+  - type: input
+    id: record
+    attributes:
+      label: Record ID or title / 条目 ID 或标题
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Proposed correction and source / 修改建议与来源
+      description: Distinguish what the source states from your interpretation.
+    validations:
+      required: true

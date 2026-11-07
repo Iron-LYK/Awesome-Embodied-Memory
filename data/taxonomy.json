@@ -1,0 +1,464 @@
+{
+  "schema_version": "2.0",
+  "updated": "2026-11-02",
+  "basis": "Domain first; dominant memory interface second; orthogonal mechanism tags and six evidence axes. The living catalogue is distinct from the fixed manuscript corpus.",
+  "groups": [
+    {
+      "id": "world-models",
+      "label_en": "World Models & WAM",
+      "label_zh": "世界模型与 WAM",
+      "tagline_en": "Remember a changing world.",
+      "tagline_zh": "记住持续变化的世界。",
+      "description_en": "Video and latent world models, persistent world state, and world-action models. Video generation is a relevant precursor, not automatically a robot policy.",
+      "description_zh": "视频与潜在世界模型、持续世界状态、世界动作模型。视频生成是相关前驱，不自动等同于机器人策略。",
+      "supporting": false
+    },
+    {
+      "id": "vla",
+      "label_en": "VLA",
+      "label_zh": "VLA",
+      "tagline_en": "Act with the right history.",
+      "tagline_zh": "用必要的历史作出动作。",
+      "description_en": "History-conditioned action policies: visual-language-action models and memory-relevant visuomotor precursors. Action chunks alone do not establish memory.",
+      "description_zh": "以历史为条件的动作策略：VLA 及相关视觉运动方法。输出动作 chunk 本身不构成记忆证据。",
+      "supporting": false
+    },
+    {
+      "id": "agentic-robotics",
+      "label_en": "Agentic Robotics",
+      "label_zh": "智能体机器人系统",
+      "tagline_en": "Turn experience into behavior.",
+      "tagline_zh": "让经历影响后续行为。",
+      "description_en": "Embodied agents that retain task, spatial, episodic, or procedural state; VLM planners, VLA/WAM executors, and runtime harnesses. Navigation and mapping precursors are labeled by scope.",
+      "description_zh": "保留任务、空间、情景或程序状态的具身智能体；涵盖 VLM 规划、VLA/WAM 执行与 harness。导航及建图前驱另行标明证据范围。",
+      "supporting": false
+    },
+    {
+      "id": "foundations",
+      "label_en": "Supporting Foundations",
+      "label_zh": "支撑性基础研究",
+      "tagline_en": "Understand the building blocks.",
+      "tagline_zh": "理解可迁移的基础机制。",
+      "description_en": "General memory architectures, language-agent systems, selected model/control baselines, evaluation tools and surveys. Supporting references are not additional embodied-memory methods.",
+      "description_zh": "通用记忆架构、语言智能体系统、选定模型与控制基线、评测工具及综述；支撑文献不等同于新增具身记忆方法。",
+      "supporting": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "world-models--observed-history",
+      "parent_id": "world-models",
+      "method_family": "observed-history",
+      "label_en": "History windows & caches",
+      "label_zh": "历史窗口与缓存",
+      "definition": "Observed history, anchor frames, rolling windows, and cache policies.",
+      "description_en": "Observed history at one or more temporal scales, initial anchors, rolling windows, and cache retention policies.",
+      "description_zh": "单尺度或多尺度真实观察历史、首帧锚点、滚动窗口与缓存保留策略。"
+    },
+    {
+      "id": "world-models--compression-recurrence",
+      "parent_id": "world-models",
+      "method_family": "compression-recurrence",
+      "label_en": "Compression & recurrent dynamics",
+      "label_zh": "压缩与递归动力学",
+      "definition": "Compact historical states, latent recurrence, and state-space dynamics.",
+      "description_en": "Compact historical states, latent recurrence, and state-space dynamics.",
+      "description_zh": "紧凑历史状态、潜变量递归与状态空间动力学。"
+    },
+    {
+      "id": "world-models--retrieval-spatial",
+      "parent_id": "world-models",
+      "method_family": "retrieval-spatial",
+      "label_en": "Retrieval & spatial grounding",
+      "label_zh": "检索与空间锚定",
+      "definition": "Addressable evidence through retrieval, geometry, maps, and view consistency.",
+      "description_en": "Addressable evidence through retrieval, geometry, maps, and view consistency.",
+      "description_zh": "通过检索、几何、地图及视角一致性寻址历史证据。"
+    },
+    {
+      "id": "world-models--persistent-state",
+      "parent_id": "world-models",
+      "method_family": "persistent-state",
+      "label_en": "Persistent world state",
+      "label_zh": "持续世界状态",
+      "definition": "Entity persistence, object permanence, state revision, and shared worlds.",
+      "description_en": "Entity persistence, object permanence, state revision, and shared worlds.",
+      "description_zh": "实体持续性、物体恒存、状态修订与共享世界。"
+    },
+    {
+      "id": "world-models--predictive-control",
+      "parent_id": "world-models",
+      "method_family": "predictive-control",
+      "label_en": "Imagination & action coupling",
+      "label_zh": "想象与动作耦合",
+      "definition": "World prediction linked to planning and control; predictions are distinguished from observed memory.",
+      "description_en": "World prediction linked to planning and control; predictions are distinguished from observed memory.",
+      "description_zh": "连接世界预测、规划与控制；区分生成的未来和观测到的过去。"
+    },
+    {
+      "id": "world-models--learning-runtime",
+      "parent_id": "world-models",
+      "method_family": "learning-runtime",
+      "label_en": "Learning, adaptation & runtime",
+      "label_zh": "学习、适配与运行机制",
+      "description_en": "Memory-relevant training, consolidation, adaptation, cache validity and execution timing; labeled contextual when no online memory mechanism is established.",
+      "description_zh": "与记忆相关的训练、整合、适配、缓存有效性和执行时序；未建立在线记忆机制时标注为背景。",
+      "definition": "Memory-relevant training, consolidation, adaptation and runtime boundaries."
+    },
+    {
+      "id": "world-models--evaluation",
+      "parent_id": "world-models",
+      "method_family": "evaluation",
+      "label_en": "Evaluation & world consistency",
+      "label_zh": "评测与世界一致性",
+      "definition": "Recall, revisits, hidden-state evolution, and world-model evaluation.",
+      "description_en": "Recall, revisits, hidden-state evolution, and world-model evaluation.",
+      "description_zh": "回忆、重访、隐状态演化与世界模型评测。"
+    },
+    {
+      "id": "vla--observed-history",
+      "parent_id": "vla",
+      "method_family": "observed-history",
+      "label_en": "History inputs & temporal caches",
+      "label_zh": "历史输入与时序缓存",
+      "definition": "Observation histories and cache interfaces consumed by action policies.",
+      "description_en": "Observation histories and cache interfaces consumed by action policies.",
+      "description_zh": "动作策略实际消费的观测历史与缓存接口。"
+    },
+    {
+      "id": "vla--compression-recurrence",
+      "parent_id": "vla",
+      "method_family": "compression-recurrence",
+      "label_en": "Compressed & recurrent memory",
+      "label_zh": "压缩与递归记忆",
+      "definition": "Recurrent tokens, belief states, and compressed control history.",
+      "description_en": "Visual token pooling, learned history compression, recurrent tokens, and compact belief states for action policies.",
+      "description_zh": "面向动作策略的视觉 token 池化、学习式历史压缩、循环 token 与紧凑信念状态。"
+    },
+    {
+      "id": "vla--episodic-retrieval",
+      "parent_id": "vla",
+      "method_family": "episodic-retrieval",
+      "label_en": "Episodes, keyframes & retrieval",
+      "label_zh": "情景、关键帧与检索",
+      "definition": "Selective writes and retrieval of past task evidence.",
+      "description_en": "Retained episodes and keyframes, selective writes, and retrieval of task-relevant past evidence.",
+      "description_zh": "保留情景与关键帧，通过选择性写入和检索获取与任务相关的历史证据。"
+    },
+    {
+      "id": "vla--task-progress",
+      "parent_id": "vla",
+      "method_family": "task-progress",
+      "label_en": "Task progress & plan state",
+      "label_zh": "任务进度与计划状态",
+      "definition": "Progress records, language scratchpads, latent plans, and action continuity; intended actions are not executed facts.",
+      "description_en": "Progress records, language scratchpads, latent plans, and action continuity; intended actions are not executed facts.",
+      "description_zh": "进度记录、语言草稿、潜在计划及动作连续性；计划动作并非已执行事实。"
+    },
+    {
+      "id": "vla--action-touch",
+      "parent_id": "vla",
+      "method_family": "action-touch",
+      "label_en": "Spatial, action & touch history",
+      "label_zh": "空间、动作与触觉历史",
+      "definition": "Object traces, geometry, executed actions, proprioception, contact and tactile history.",
+      "description_en": "Object traces, geometry, executed actions, proprioception, contact and tactile history.",
+      "description_zh": "对象轨迹、几何、已执行动作、本体状态、接触与触觉历史。"
+    },
+    {
+      "id": "vla--learning-runtime",
+      "parent_id": "vla",
+      "method_family": "learning-runtime",
+      "label_en": "Learning, adaptation & runtime",
+      "label_zh": "学习、适配与运行机制",
+      "description_en": "Memory-relevant training, consolidation, adaptation, cache validity and execution timing; labeled contextual when no online memory mechanism is established.",
+      "description_zh": "与记忆相关的训练、整合、适配、缓存有效性和执行时序；未建立在线记忆机制时标注为背景。",
+      "definition": "Memory-relevant training, consolidation, adaptation and runtime boundaries."
+    },
+    {
+      "id": "vla--evaluation",
+      "parent_id": "vla",
+      "method_family": "evaluation",
+      "label_en": "Memory-sensitive policy evaluation",
+      "label_zh": "记忆敏感策略评测",
+      "definition": "Non-Markovian tasks, interference, control dependence, and policy evaluation context.",
+      "description_en": "Non-Markovian tasks, interference, control dependence, and policy evaluation context.",
+      "description_zh": "非马尔可夫任务、干扰、控制依赖与相关策略评测。"
+    },
+    {
+      "id": "agentic-robotics--episodic-retrieval",
+      "parent_id": "agentic-robotics",
+      "method_family": "episodic-retrieval",
+      "label_en": "Episodic experience & retrieval",
+      "label_zh": "情景经历与检索",
+      "definition": "Time-indexed experience that an embodied agent can revisit and use.",
+      "description_en": "Time-indexed experience that an embodied agent can revisit and use.",
+      "description_zh": "具身智能体可重新检索并使用的带时间经历。"
+    },
+    {
+      "id": "agentic-robotics--semantic-spatial",
+      "parent_id": "agentic-robotics",
+      "method_family": "semantic-spatial",
+      "label_en": "Semantic & spatial memory",
+      "label_zh": "语义与空间记忆",
+      "definition": "Maps, scene graphs, entities, and grounded knowledge across observations.",
+      "description_en": "Maps, scene graphs, entities, and grounded knowledge across observations.",
+      "description_zh": "跨观测保留的地图、场景图、实体与具身知识。"
+    },
+    {
+      "id": "agentic-robotics--task-state-planning",
+      "parent_id": "agentic-robotics",
+      "method_family": "task-state-planning",
+      "label_en": "Task state & long-horizon planning",
+      "label_zh": "任务状态与长程规划",
+      "definition": "Subgoals, beliefs, progress tracking, and plans grounded in accumulated evidence.",
+      "description_en": "Persistent subgoals, progress records, semantic updates, and visual cues passed from planners to VLA/WAM executors.",
+      "description_zh": "持续子目标、进度记录、语义更新，以及从规划器传递给 VLA/WAM 执行器的视觉线索。"
+    },
+    {
+      "id": "agentic-robotics--procedural-harness",
+      "parent_id": "agentic-robotics",
+      "method_family": "procedural-harness",
+      "label_en": "Skills, programs & harnesses",
+      "label_zh": "技能、程序与运行框架",
+      "definition": "Executable skills, program state, tool runtimes, and state handoff.",
+      "description_en": "Executable skills, program state, tool runtimes, and state handoff.",
+      "description_zh": "可执行技能、程序状态、工具运行时与状态交接。"
+    },
+    {
+      "id": "agentic-robotics--reflection-adaptation",
+      "parent_id": "agentic-robotics",
+      "method_family": "reflection-adaptation",
+      "label_en": "Reflection & experience adaptation",
+      "label_zh": "反思与经历适配",
+      "definition": "Failure analysis, experience consolidation, and adaptation across attempts.",
+      "description_en": "Failure analysis, experience consolidation, and adaptation across attempts.",
+      "description_zh": "失败分析、经验整合与跨尝试适配。"
+    },
+    {
+      "id": "agentic-robotics--evaluation",
+      "parent_id": "agentic-robotics",
+      "method_family": "evaluation",
+      "label_en": "Embodied-agent evaluation",
+      "label_zh": "具身智能体评测",
+      "definition": "Embodied tasks and tests of persistent experience, reasoning, and interaction.",
+      "description_en": "Embodied tasks and tests of persistent experience, reasoning, and interaction.",
+      "description_zh": "具身任务及对持续经历、推理、交互的测试。"
+    },
+    {
+      "id": "foundations--architectures",
+      "parent_id": "foundations",
+      "method_family": "architectures",
+      "label_en": "Architectures & model baselines",
+      "label_zh": "架构与模型基线",
+      "definition": "Transferable attention, recurrence, state-space, and external-memory architectures.",
+      "description_en": "Transferable memory architectures and selected model/control baselines used to interpret memory claims.",
+      "description_zh": "可迁移记忆架构，以及用于解释记忆主张的选定模型与控制基线。"
+    },
+    {
+      "id": "foundations--agent-memory",
+      "parent_id": "foundations",
+      "method_family": "agent-memory",
+      "label_en": "General agent memory & runtimes",
+      "label_zh": "通用智能体记忆与运行时",
+      "definition": "Language-agent memory and harness designs without a verified embodied deployment in this record.",
+      "description_en": "Language-agent memory and harness designs without a verified embodied deployment in this record.",
+      "description_zh": "当前条目未核实具身部署的语言智能体记忆与运行框架。"
+    },
+    {
+      "id": "foundations--surveys",
+      "parent_id": "foundations",
+      "method_family": "surveys",
+      "label_en": "Surveys & perspectives",
+      "label_zh": "综述与观点",
+      "definition": "Prior syntheses and conceptual framing.",
+      "description_en": "Prior syntheses and conceptual framing.",
+      "description_zh": "既有综述与概念框架。"
+    },
+    {
+      "id": "foundations--evaluation",
+      "parent_id": "foundations",
+      "method_family": "evaluation",
+      "label_en": "General evaluation & datasets",
+      "label_zh": "通用评测与数据集",
+      "definition": "Supporting memory benchmarks and datasets outside direct robot-memory evaluation.",
+      "description_en": "Supporting memory benchmarks and datasets outside direct robot-memory evaluation.",
+      "description_zh": "直接机器人记忆评测以外的支撑性基准与数据。"
+    }
+  ],
+  "mechanism_tags": [
+    {
+      "id": "kv",
+      "label_en": "Window / KV cache",
+      "label_zh": "窗口／KV 缓存"
+    },
+    {
+      "id": "recurrent",
+      "label_en": "Compression / recurrent state",
+      "label_zh": "压缩／递归状态"
+    },
+    {
+      "id": "retrieval",
+      "label_en": "Retrieval / event addressing",
+      "label_zh": "检索／事件寻址"
+    },
+    {
+      "id": "spatial",
+      "label_en": "Spatial / geometric memory",
+      "label_zh": "空间／几何记忆"
+    },
+    {
+      "id": "language",
+      "label_en": "Language / task progress",
+      "label_zh": "语言／任务进度"
+    },
+    {
+      "id": "procedural",
+      "label_en": "Skills / executable harness",
+      "label_zh": "技能／可执行运行框架"
+    },
+    {
+      "id": "update",
+      "label_en": "State revision / validity",
+      "label_zh": "状态修订／有效性"
+    },
+    {
+      "id": "training",
+      "label_en": "Training / distillation",
+      "label_zh": "训练／蒸馏"
+    },
+    {
+      "id": "adaptation",
+      "label_en": "Experience adaptation",
+      "label_zh": "经历适配"
+    },
+    {
+      "id": "evaluation",
+      "label_en": "Evaluation",
+      "label_zh": "评测"
+    },
+    {
+      "id": "multimodal",
+      "label_en": "Motion / proprioception / contact",
+      "label_zh": "运动／本体／接触"
+    },
+    {
+      "id": "asynchronous",
+      "label_en": "Asynchronous execution",
+      "label_zh": "异步执行"
+    },
+    {
+      "id": "generated",
+      "label_en": "Prediction / generated content",
+      "label_zh": "预测／生成内容"
+    },
+    {
+      "id": "observed",
+      "label_en": "Observed history",
+      "label_zh": "观测历史"
+    },
+    {
+      "id": "parametric",
+      "label_en": "Parameter / skill memory",
+      "label_zh": "参数／技能记忆"
+    },
+    {
+      "id": "multiagent",
+      "label_en": "Shared agent memory",
+      "label_zh": "多主体共享记忆"
+    },
+    {
+      "id": "structured",
+      "label_en": "Graphs / structured state",
+      "label_zh": "图／结构化状态"
+    },
+    {
+      "id": "write-selection",
+      "label_en": "Gating / selective writes",
+      "label_zh": "门控／选择性写入"
+    },
+    {
+      "id": "plan-continuity",
+      "label_en": "Planned-action continuity",
+      "label_zh": "计划动作连续性",
+      "definition": "Carries an unexecuted proposed action tail or other replanning state. It must not be labeled executed action history without an execution receipt."
+    },
+    {
+      "id": "procedural-state",
+      "label_en": "Program and phase state",
+      "label_zh": "程序变量与阶段状态",
+      "definition": "Explicit program variables, control phase, predicates or continuation state carried across controller calls; distinct from a frozen reusable skill library."
+    },
+    {
+      "id": "visual-compression",
+      "label_en": "Visual token compression",
+      "label_zh": "视觉 token 压缩"
+    },
+    {
+      "id": "multiscale",
+      "label_en": "Multiple temporal scales",
+      "label_zh": "多时间尺度"
+    },
+    {
+      "id": "memory-routing",
+      "label_en": "Adaptive memory budget / routing",
+      "label_zh": "自适应记忆预算与路由"
+    },
+    {
+      "id": "hierarchical-memory",
+      "label_en": "Planner–policy memory handoff",
+      "label_zh": "规划器与策略的记忆交接"
+    }
+  ],
+  "six_axes": [
+    {
+      "id": "source",
+      "label_zh": "信息来源",
+      "label_en": "Information source",
+      "description_zh": "真实观察、执行回执、示教、生成假设、反思或权重；不能把预测当作事实。",
+      "description_en": "Observed evidence, execution receipts, demonstrations, generated hypotheses, reflections, or weights; forecasts are not observations."
+    },
+    {
+      "id": "representation",
+      "label_zh": "表示",
+      "label_en": "Representation",
+      "description_zh": "帧或 latent、KV、递归状态、对象槽、轨迹、地图、文本、图或技能参数。",
+      "description_en": "Frames/latents, KV states, recurrent states, slots, trajectories, maps, text, graphs, or skill parameters."
+    },
+    {
+      "id": "address",
+      "label_zh": "地址",
+      "label_en": "Address",
+      "description_zh": "按物理时间、空间、实体、事件、任务阶段、动作效果或语义查询定位内容。",
+      "description_en": "Address by physical time, space, entity, event, task stage, action effect, or semantic query."
+    },
+    {
+      "id": "operations",
+      "label_zh": "读写与修订",
+      "label_en": "Read/write and revision",
+      "description_zh": "写入、读取、压缩、合并、更新、遗忘、失效、验证与重算。",
+      "description_en": "Write, read, compress, merge, update, forget, invalidate, verify, and recompute."
+    },
+    {
+      "id": "temporal_scope",
+      "label_zh": "时间与持久范围",
+      "label_en": "Temporal scope",
+      "description_zh": "一次查询、chunk、episode、跨 episode 或持续部署；同时报告事件时间和证据有效性。",
+      "description_en": "Within-query, chunk, episode, cross-episode, or deployment persistence; retain event time and validity."
+    },
+    {
+      "id": "consumer",
+      "label_zh": "消费接口",
+      "label_en": "Consumer interface",
+      "description_zh": "视频预测器、动作专家、高层规划器、验证器或 harness；保存的信息必须到达合适的读者。",
+      "description_en": "Video predictor, action expert, high-level planner, verifier, or harness; useful state must reach the correct reader."
+    }
+  ],
+  "counting_rules": [
+    "One primary domain and method family per research-work ID; secondary tags never multiply counts.",
+    "Domain assignment describes the main consumer/interface, not a claim that domains are mutually exclusive.",
+    "Preserve evidence role and review depth. Supporting foundations and contextual baselines are visibly distinguished.",
+    "Research papers/reports, implementation observations, and industry essays are separate collections.",
+    "No full-paper review or reproduced performance is inferred from abstract screening."
+  ]
+}

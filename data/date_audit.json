@@ -1,0 +1,359 @@
+{
+  "updated": "2026-11-07",
+  "records": [
+    {
+      "id": "impl-pyrsi",
+      "title": "PyRUA-RSI",
+      "date": "2026-10-30",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/213",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/213",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-30T09:05:51Z",
+        "source_sha256": "6a816b110a6950050452039e6830bf4733a5d862b61496649a4b040d61eae86e",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-hexashell",
+      "title": "HexaShell-1.5",
+      "date": "2026-10-27",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/209",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/209",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-27T18:07:08Z",
+        "source_sha256": "b68c973bf9ab32d79462eeddd3e60909f6f9ed2b75f45c38e6aac52cd32cd00c",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-mibot",
+      "title": "Mibot-RSI",
+      "date": "2026-10-26",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/204",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/204",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-26T06:09:16Z",
+        "source_sha256": "198e99ea069c2f556ada4eed94d88187bf51cb40107d357f6492b5a020a47704",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-runwu",
+      "title": "RunWu-RSI",
+      "date": "2026-10-21",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/195",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/195",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-21T20:48:32Z",
+        "source_sha256": "8e8fb3fd73644c4f5efbc6156b9634abe3384af4ce5fa7dd61b6c83d3249025e",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-realrsi",
+      "title": "REAL_RSI",
+      "date": "2026-10-23",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/198",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/198",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-23T04:22:02Z",
+        "source_sha256": "6c22951977ed59441bacb0b7361ede68e93a7372853424e5f7cc9fa46662cf38",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-evorepro",
+      "title": "EmbodiedEvoRepro",
+      "date": "2026-10-27",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/208",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/208",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-27T07:49:39Z",
+        "source_sha256": "5e91098f1e271c0e70dd2d9a5a521ac4c0ce8317ef250b703a72b098b25a53ad",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-oeh",
+      "title": "OEH_Review",
+      "date": "2026-10-28",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/210",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/210",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-28T04:45:23Z",
+        "source_sha256": "8ade1d7e3bfb3a59fd7a693150518697940185d37d0803c8c9c6c57b87409500",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-harness",
+      "title": "HarnessPolicy",
+      "date": "2026-10-24",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/200",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/200",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-24T13:28:57Z",
+        "source_sha256": "f47ac39313191707bb3c8ce687ea5ea34f7c16666b082f0d1344798f52e392ed",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-mebrain",
+      "title": "ME_Brain_RSI",
+      "date": "2026-10-26",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/205",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/205",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-26T11:37:24Z",
+        "source_sha256": "e6ea3ce8f0432b75d9aac55f494da282c1cb8e86198c92c50375d3d43655f55b",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-g07",
+      "title": "G07-preview",
+      "date": "2026-10-28",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/211",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/211",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-28T07:08:15Z",
+        "source_sha256": "356dff3829a291f545cad6323c5d936db317063a3bc14307f914bdabd23ebf55",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-phoenix",
+      "title": "Phoenix-MWA",
+      "date": "2026-10-19",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/186",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/186",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-19T02:58:09Z",
+        "source_sha256": "c129e51d9c36573db2cd320cfddf557c968fe3a4a7680303232924e39da84e7a",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-hwm",
+      "title": "HWM-0 Preview",
+      "date": "2026-10-21",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/189",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/189",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-21T06:14:12Z",
+        "source_sha256": "27e57317b93bb5966f14ef4fcb0707ea3be46b779b508c115c753fbe1b1a84fa",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-wall",
+      "title": "WALL-OSS 1.0 Lite",
+      "date": "2026-10-21",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/193",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/193",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-21T15:41:59Z",
+        "source_sha256": "53bbad63ed2214466495d2dc1c0d21d787ddc3c8ce4c565c535fb7d28bc70e2b",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-cogact",
+      "title": "CogACT2",
+      "date": "2026-10-26",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/206",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/206",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-26T11:41:19Z",
+        "source_sha256": "e5a3f3ceb1bfc1861b5b1dea3d5908f8251d861d69fe269a5e596f3400bf3b7f",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-simate",
+      "title": "Simate-beta",
+      "date": "2026-10-21",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/191",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/191",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-21T10:55:46Z",
+        "source_sha256": "f1adefec6887885459b1d4a382c04fb5ae41cfc0674528a3313c87e969bf5b2f",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-go3twin",
+      "title": "GO-3 RoboTwin / GE-Act 2.0",
+      "date": "2026-10-25",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/202",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/202",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-25T01:55:44Z",
+        "source_sha256": "e1b56a1b7bd09c18aa72e0b4e69d709c2dbaefaebd248a46af80c1dfbcc3bcb0",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-bagel",
+      "title": "Bagel-Robotics-1-Preview",
+      "date": "2026-10-30",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/215",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/215",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-30T19:27:26Z",
+        "source_sha256": "7685efef3763ce75a4eb9799209db86d670bd9e79fab4b4c70a60e8d312bcf55",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-rsiwam",
+      "title": "RSIWAM",
+      "date": "2026-11-01",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/219",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/219",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-11-01T14:51:10Z",
+        "source_sha256": "d7dd26f6a4ffe1b68263dd0af1fc17e2d3f71a0ac79a82b084f17661fcf86974",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-rex",
+      "title": "Rex-M1-preview",
+      "date": "2026-10-26",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/207",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/207",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-26T13:18:59Z",
+        "source_sha256": "95c071eb5c2219d9d367e4149a6d6d30604547528f6a789e2e1f0333a626df4e",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-liber-lite",
+      "title": "Liber-0 Lite",
+      "date": "2026-10-10",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/156",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/156",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-10T13:16:08Z",
+        "source_sha256": "0c53cc4dad9052d54b2d1cd45a3c4ef041f7f926d6913adbd5257301c252554b",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-liber-preview",
+      "title": "Liber-0 Preview",
+      "date": "2026-10-14",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/169",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/169",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-14T09:21:44Z",
+        "source_sha256": "6af4e729205f88437ea70f6cf8434a22970a694a2ada00a20bfb5a4c9ac20dc7",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "impl-dm05",
+      "title": "DM0.5 / OpenDM MEM",
+      "date": "2026-08-20",
+      "basis": "benchmark-pr",
+      "source": {
+        "url": "https://github.com/XPolicyLab/XPolicyLab/pull/101",
+        "api_url": "https://api.github.com/repos/XPolicyLab/XPolicyLab/pulls/101",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-08-20T05:47:56Z",
+        "source_sha256": "f2913a8f4b6ca399eef6f9faf8154e5b74482325454b812f3f2eb603d51ee214",
+        "hash_basis": "Canonical JSON of GitHub PR number, title, html_url and created_at; sorted keys, compact separators."
+      }
+    },
+    {
+      "id": "worldla2026",
+      "title": "WorldLA: Bridging World Action Models and Efficient VLAs via Interaction Distillation and Coherent Replanning",
+      "date": "2026-10-22",
+      "basis": "report-repository-commit",
+      "source": {
+        "url": "https://github.com/18643638196xhx/WorldLA/commit/1136b92c86bfc7536e5415b6ec41a6342ad4b954",
+        "api_url": "https://api.github.com/repos/18643638196xhx/WorldLA/commits/1136b92c86bfc7536e5415b6ec41a6342ad4b954",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-22T15:43:39Z",
+        "commit": "1136b92c86bfc7536e5415b6ec41a6342ad4b954",
+        "source_sha256": "eb1d56e3efde06f0634f14c1c3cf477da3ea225c4a309d93e6b611825e190197",
+        "hash_basis": "Original GitHub API response for this report path history at its pinned revision."
+      }
+    },
+    {
+      "id": "duoflow2026",
+      "title": "DuoFlow: A Framework for Language-Guided Bimanual Manipulation",
+      "date": "2026-10-26",
+      "basis": "report-repository-commit",
+      "source": {
+        "url": "https://github.com/3va1in/XPolicyLab/commit/83d4032b9ccbcbf0027e5780955fd0abda195e2c",
+        "api_url": "https://api.github.com/repos/3va1in/XPolicyLab/commits/83d4032b9ccbcbf0027e5780955fd0abda195e2c",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-26T08:14:44Z",
+        "commit": "83d4032b9ccbcbf0027e5780955fd0abda195e2c",
+        "source_sha256": "06795ddbca40b45a24b90683dbd64647869256c1a88f49465ed38be0f84d376e",
+        "hash_basis": "Original GitHub API response for this report path history at its pinned revision."
+      }
+    },
+    {
+      "id": "go3rsi2026",
+      "title": "Appendix: Recursive Self-Improvement for Robotic Manipulation in RoboDojo",
+      "date": "2026-10-30",
+      "basis": "report-repository-commit",
+      "source": {
+        "url": "https://github.com/StevenWang30/XPolicyLab/commit/e4178ee754413cd792d3a37e0411ea45c58761c3",
+        "api_url": "https://api.github.com/repos/StevenWang30/XPolicyLab/commits/e4178ee754413cd792d3a37e0411ea45c58761c3",
+        "verified_on": "2026-11-07",
+        "timestamp": "2026-10-30T09:20:52Z",
+        "commit": "e4178ee754413cd792d3a37e0411ea45c58761c3",
+        "source_sha256": "97f5dbfebe4d100f137f6707084b7d0f1a1089e4301b90d96893e70ccebf2ef0",
+        "hash_basis": "Original GitHub API response for this report path history at its pinned revision."
+      }
+    }
+  ],
+  "scope": "Timeline metadata only. Bibliographic publication dates, source pins and pending-reference status are preserved."
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "id": "videodbMemory2026",
+    "bibkey": "videodbMemory2026",
+    "title": "How a robot remembers",
+    "authors": [
+      "Ashutosh Trivedi"
+    ],
+    "date": "2026-10-27",
+    "url": "https://videodb.io/blog/how-a-robot-remembers",
+    "accessed": "2026-11-02",
+    "source_sha256": "88128cf874856ac3fcc2f40110f818e4c33b056476f287a04e0fa2eb5dc36410",
+    "source_type": "vendor-authored industrial article",
+    "counted_in_research_inventory": false,
+    "evidence_boundary": "Industrial design or vendor measurement; not independent robot-control validation."
+  },
+  {
+    "id": "videodbFrames2026",
+    "bibkey": "videodbFrames2026",
+    "title": "Frame access that keeps research moving",
+    "authors": [
+      "Samuel Alexander"
+    ],
+    "date": "2026-10-22",
+    "url": "https://videodb.io/blog/frame-access-that-keeps-research-moving",
+    "accessed": "2026-11-02",
+    "source_sha256": "76dbda56551c088920a3568a278b471c7e886e8a69cdbca6df3b06cd58ada229",
+    "source_type": "vendor-authored industrial article",
+    "counted_in_research_inventory": false,
+    "evidence_boundary": "Industrial design or vendor measurement; not independent robot-control validation."
+  },
+  {
+    "id": "videodbRetrieval2026",
+    "bibkey": "videodbRetrieval2026",
+    "title": "VideoDB leads a 100-hour action retrieval benchmark against AWS Nova and Twelve Labs",
+    "authors": [
+      "Sankalp Nagaonkar",
+      "Samuel Alexander"
+    ],
+    "date": "2026-10-06",
+    "url": "https://videodb.io/blog/a-faster-path-to-the-next-policy",
+    "accessed": "2026-11-02",
+    "source_sha256": "e5ea95a145db9612e3b5e080acd04852f8fc54117a67a004c43e11bbb6fe12d3",
+    "source_type": "vendor-authored industrial article",
+    "counted_in_research_inventory": false,
+    "evidence_boundary": "Industrial design or vendor measurement; not independent robot-control validation."
+  }
+]

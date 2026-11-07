@@ -1,0 +1,16 @@
+{
+  "name": "Awesome-Embodied-Memory",
+  "tagline_en": "Memory for worlds, policies, and embodied agents.",
+  "tagline_zh": "面向世界模型、动作策略与具身智能体的记忆研究。",
+  "repository_url": "https://github.com/Iron-LYK/Awesome-Embodied-Memory",
+  "website_url": "https://iron-lyk.github.io/Awesome-Embodied-Memory/",
+  "content_license": "CC-BY-4.0",
+  "code_license": "MIT",
+  "attribution": "Awesome-Embodied-Memory contributors",
+  "release": "2026.11",
+  "languages": [
+    "en",
+    "zh-CN"
+  ],
+  "default_branch": "main"
+}

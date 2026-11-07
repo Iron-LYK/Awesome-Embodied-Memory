@@ -1,0 +1,34 @@
+{
+  "updated": "2026-11-07",
+  "original_cutoff": "2026-10-31",
+  "research_works": 640,
+  "implementation_records": 34,
+  "pending_references": 22,
+  "original_research_works": 275,
+  "followup_research_works": 12,
+  "followup_arxiv": 9,
+  "followup_undated_reports": 3,
+  "industry_sources": 3,
+  "supplied_report_sha256": "d62b2b551c6f47bfc3c22fbcf75b3a080b633677d4906b83b122c46e620eb6e0",
+  "selection": "Living purposive scoping collection; targeted official-source searches and citation/community-list discovery. Not an exhaustive systematic search.",
+  "no_models_executed": true,
+  "baseline_research_works": 287,
+  "release_additions": 352,
+  "release_batch": "2026-11-02 embodied expansion",
+  "manuscript_snapshot_research_works": 287,
+  "abstract_screened_additions": 352,
+  "new_domain_counts": {
+    "world-models": 115,
+    "vla": 109,
+    "foundations": 2,
+    "agentic-robotics": 126
+  },
+  "new_role_counts": {
+    "primary": 269,
+    "context": 81,
+    "survey": 2
+  },
+  "targeted_followup_date": "2026-11-07",
+  "targeted_followup_new_papers": 1,
+  "targeted_followup_new_code_methods": 3
+}
