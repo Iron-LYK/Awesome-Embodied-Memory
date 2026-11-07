@@ -29726,7 +29726,7 @@
     "accessed": "2026-11-02",
     "bibkey": "worldla2026",
     "family": "e-plan",
-    "summary": "WorldLA 将 WAM 的阶段相关视觉读取关系蒸馏给轻量 VLA，同时保留上次计划未执行部分并与新计划融合。它已有可引用的技术报告，不应继续写 TODO ref；但其缓存 teacher targets 与运行中的 previous_plan 是性质不同的两种保存。",
+    "summary": "WorldLA 将 WAM 的阶段相关视觉读取关系蒸馏给轻量 VLA，同时保留上次计划未执行部分并与新计划融合。它已有可引用的技术报告；但其缓存 teacher targets 与运行中的 previous_plan 是性质不同的两种保存。",
     "insight": "previous_plan 是预测承诺，不是已发生事件证据。它能改善连续控制，也可能保留过时意图；检验收益时应控制观测刷新率与执行步长，加入计划失效和突变场景。离线知识蒸馏亦不是跨策略传递当前 episode 的事实状态。",
     "group": "wam",
     "role": "context",
@@ -29745,7 +29745,7 @@
       "training"
     ],
     "summary_en": "Distills WAM interaction structure into a VLA and blends the unexecuted tail of the previous plan with the new plan; retained plans are not observed events.",
-    "summary_zh": "WorldLA 将 WAM 的阶段相关视觉读取关系蒸馏给轻量 VLA，同时保留上次计划未执行部分并与新计划融合。它已有可引用的技术报告，不应继续写 TODO ref；但其缓存 teacher targets 与运行中的 previous_plan 是性质不同的两种保存。",
+    "summary_zh": "WorldLA 将 WAM 的阶段相关视觉读取关系蒸馏给轻量 VLA，同时保留上次计划未执行部分并与新计划融合。它已有可引用的技术报告；但其缓存 teacher targets 与运行中的 previous_plan 是性质不同的两种保存。",
     "analysis_zh": "previous_plan 是预测承诺，不是已发生事件证据。它能改善连续控制，也可能保留过时意图；检验收益时应控制观测刷新率与执行步长，加入计划失效和突变场景。离线知识蒸馏亦不是跨策略传递当前 episode 的事实状态。",
     "classification_confidence": "focused-source-audit",
     "scope_note_zh": "公开技术报告；未核定发表日期。",
