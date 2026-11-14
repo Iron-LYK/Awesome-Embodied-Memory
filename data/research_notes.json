@@ -145,5 +145,38 @@
       "2610.40748",
       "2610.10528"
     ]
+  },
+  {
+    "title_en": "Three routes to robot agency",
+    "title_zh": "机器人智能体的三条路线",
+    "body_en": "Online model control, hierarchical calls to learned policies, and compiled programs have different memory consumers and preparation costs. Compare execution feedback and freezing points before headline scores.",
+    "body_zh": "在线模型控制、分层调用学习型策略、编译后的程序，拥有不同的记忆消费者与准备成本。先比较执行反馈和冻结节点，再解释总分。",
+    "ids": [
+      "2611.16009",
+      "2606.07723",
+      "2611.06768"
+    ]
+  },
+  {
+    "title_en": "A memory clock can become a shortcut",
+    "title_zh": "记忆时钟也可能成为捷径",
+    "body_en": "Null pauses and fidgets can advance apparent task progress in a memory policy. Retention quality, event indexing and action-conditioned validity require separate tests.",
+    "body_zh": "无效停顿和空动作可能让记忆策略误判任务进展。保留质量、事件索引及动作条件下的有效性，需要分开检验。",
+    "ids": [
+      "2611.14488",
+      "2611.06475"
+    ]
+  },
+  {
+    "title_en": "Low latency does not remove stale evidence",
+    "title_zh": "低延迟不能消除过期证据",
+    "body_en": "Asynchronous policies must reconcile observation age, semantic-memory updates and irrevocably committed actions. Server forward time is only one part of the control budget.",
+    "body_zh": "异步策略必须协调观测年龄、语义记忆更新与不可撤回的已提交动作。服务器前向时间只是控制预算的一部分。",
+    "ids": [
+      "2611.05155",
+      "2611.00758",
+      "2506.07339",
+      "2512.05964"
+    ]
   }
 ]

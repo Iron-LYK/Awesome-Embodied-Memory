@@ -1,6 +1,6 @@
 # Pending references
 
-Updated 2026-11-07. **22 implementation variants** have no matching standalone paper or technical report verified in this audit. This is not a claim that no paper exists anywhere, nor a prediction that one will be published. Keep **`Method name: TODO ref`** until replacement.
+Updated 2026-11-14. **22 implementation variants** have no matching standalone paper or technical report verified in this audit. This is not a claim that no paper exists anywhere, nor a prediction that one will be published. Keep **`Method name: TODO ref`** until replacement.
 
 The website labels these entries **Pre-publication methods**. This describes publication matching, not whether the code release is official. Paper-backed deployment audits appear within the corresponding paper details, retaining their original evidence and versions.
 

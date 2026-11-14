@@ -14,10 +14,10 @@ An open map of memory in **World Models & WAM, VLA, and Agentic Robotics**. Find
 
 | Domain | The memory question | Method families | Papers & reports |
 |:---|:---|:---|---:|
-| 🌌 **[World Models & WAM](#world-models)** | What persists as the world changes? | [History windows & caches](#world-models--observed-history) · [Compression & recurrent dynamics](#world-models--compression-recurrence) · [Retrieval & spatial grounding](#world-models--retrieval-spatial) · [Persistent world state](#world-models--persistent-state) · [Imagination & action coupling](#world-models--predictive-control) · [Learning, adaptation & runtime](#world-models--learning-runtime) · [Evaluation & world consistency](#world-models--evaluation) | **236** |
-| 🦾 **[VLA](#vla)** | Which history should guide the next action? | [History inputs & temporal caches](#vla--observed-history) · [Compressed & recurrent memory](#vla--compression-recurrence) · [Episodes, keyframes & retrieval](#vla--episodic-retrieval) · [Task progress & plan state](#vla--task-progress) · [Spatial, action & touch history](#vla--action-touch) · [Learning, adaptation & runtime](#vla--learning-runtime) · [Memory-sensitive policy evaluation](#vla--evaluation) | **203** |
-| 🤖 **[Agentic Robotics](#agentic-robotics)** | How does experience guide a robot over time? | [Episodic experience & retrieval](#agentic-robotics--episodic-retrieval) · [Semantic & spatial memory](#agentic-robotics--semantic-spatial) · [Task state & long-horizon planning](#agentic-robotics--task-state-planning) · [Skills, programs & harnesses](#agentic-robotics--procedural-harness) · [Reflection & experience adaptation](#agentic-robotics--reflection-adaptation) · [Embodied-agent evaluation](#agentic-robotics--evaluation) | **157** |
-| 🧩 **[Supporting Foundations](#foundations)** | Which mechanisms transfer across systems? | [Architectures & model baselines](#foundations--architectures) · [General agent memory & runtimes](#foundations--agent-memory) · [Surveys & perspectives](#foundations--surveys) · [General evaluation & datasets](#foundations--evaluation) | **44** |
+| 🌌 **[World Models & WAM](#world-models)** | What persists as the world changes? | [History windows & caches](#world-models--observed-history) · [Compression & recurrent dynamics](#world-models--compression-recurrence) · [Retrieval & spatial grounding](#world-models--retrieval-spatial) · [Persistent world state](#world-models--persistent-state) · [Imagination & action coupling](#world-models--predictive-control) · [Learning, adaptation & runtime](#world-models--learning-runtime) · [Evaluation & world consistency](#world-models--evaluation) | **246** |
+| 🦾 **[VLA](#vla)** | Which history should guide the next action? | [History inputs & temporal caches](#vla--observed-history) · [Compressed & recurrent memory](#vla--compression-recurrence) · [Episodes, keyframes & retrieval](#vla--episodic-retrieval) · [Task progress & plan state](#vla--task-progress) · [Spatial, action & touch history](#vla--action-touch) · [Learning, adaptation & runtime](#vla--learning-runtime) · [Memory-sensitive policy evaluation](#vla--evaluation) | **211** |
+| 🤖 **[Agentic Robotics](#agentic-robotics)** | How does experience guide a robot over time? | [Episodic experience & retrieval](#agentic-robotics--episodic-retrieval) · [Semantic & spatial memory](#agentic-robotics--semantic-spatial) · [Task state & long-horizon planning](#agentic-robotics--task-state-planning) · [Skills, programs & harnesses](#agentic-robotics--procedural-harness) · [Reflection & experience adaptation](#agentic-robotics--reflection-adaptation) · [Embodied-agent evaluation](#agentic-robotics--evaluation) | **199** |
+| 🧩 **[Supporting Foundations](#foundations)** | Which mechanisms transfer across systems? | [Architectures & model baselines](#foundations--architectures) · [General agent memory & runtimes](#foundations--agent-memory) · [Surveys & perspectives](#foundations--surveys) · [General evaluation & datasets](#foundations--evaluation) | **55** |
 
 **How to read the map:** WAM/VLA describe model interfaces; Agentic Robotics covers the system around them—VLM planning, execution, skills and harnesses. Each work has one primary home. Supporting and contextual work is labeled; long trajectories or action chunks alone do not establish memory.
 
@@ -62,12 +62,15 @@ An open map of memory in **World Models & WAM, VLA, and Agentic Robotics**. Find
 
 <a id="world-models--observed-history"></a>
 
-### 🎞️ History windows & caches · 30
+### 🎞️ History windows & caches · 33
 
 Observed history at one or more temporal scales, initial anchors, rolling windows, and cache retention policies.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [Semantically Aligned KV Cache Compression for Efficient Agentic Autoregressive Video Generation](https://arxiv.org/abs/2611.11452v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.11452v1) | arXiv<br>2026-11-08 | Uses planner constraints to select video KV entries that support semantic requirements across generated candidates. |
+| [Learning-to-Memorize: Dynamic Context Management for Long-Horizon Autoregressive Video Generation](https://arxiv.org/abs/2611.01858v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.01858v1) | arXiv<br>2026-11-01 | Learns retention, eviction, and anchor evolution under a fixed autoregressive-video cache budget. |
+| [What Helps Denoising Can Hurt Memory: Rethinking History in Long Video Generation](https://arxiv.org/abs/2611.00937v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.00937v1) | arXiv<br>2026-10-31 | Restricts KV committing to the preceding block while retaining broader history for video denoising. |
 | [WorldBridge: Bridging Video and Action for Task Generalization in World Action Models](https://arxiv.org/abs/2610.40748v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.40748v1) [![Web](assets/link-web.svg)](https://worldbridge-jd.github.io/) | arXiv<br>2026-10-29 | Compresses short- and long-range observations into clean causal-VAE memory for joint video-action prediction. |
 | [PrismWAM: Decoupling State Representations in World Action Models](https://arxiv.org/abs/2610.26564v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.26564v1) [![GitHub stars](https://img.shields.io/github/stars/THUSI-Lab/PrismWAM.svg?style=social&label=Star)](https://github.com/THUSI-Lab/PrismWAM) [![Web](assets/link-web.svg)](https://prism-wam.github.io/) | arXiv<br>2026-10-19 | Retains observed RGB history while separating semantic planning from future depth and image generation. |
 | [Memory Forcing: Attendable Mid-Horizon History for Streaming Video Generation](https://arxiv.org/abs/2610.11756v3) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.11756v3) | arXiv<br>2026-10-08 | Partitions fixed-capacity memory into initial, archive, and working banks with separate positional treatment. |
@@ -101,12 +104,13 @@ Observed history at one or more temporal scales, initial anchors, rolling window
 
 <a id="world-models--compression-recurrence"></a>
 
-### 🧠 Compression & recurrent dynamics · 54
+### 🧠 Compression & recurrent dynamics · 55
 
 Compact historical states, latent recurrence, and state-space dynamics.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [NanoKV: High-Ratio KV Cache Compression for Autoregressive Video Generation](https://arxiv.org/abs/2611.06377v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.06377v1) [![GitHub stars](https://img.shields.io/github/stars/jiacheng-lu03/NanoKV.svg?style=social&label=Star)](https://github.com/jiacheng-lu03/NanoKV) [![Web](assets/link-web.svg)](https://jiacheng-lu03.github.io/NanoKV/) | arXiv<br>2026-11-04 | Compresses video KV content and residuals with distinct key and value objectives. |
 | [Recast the Past: Stable Long Video Generation with Full Context Memory](https://arxiv.org/abs/2610.27986v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.27986v1) [![GitHub stars](https://img.shields.io/github/stars/scottykma/Recam.svg?style=social&label=Star)](https://github.com/scottykma/Recam) | arXiv<br>2026-10-20 | Compresses historical latent blocks into hidden-space memory tokens accessed through the video transformer's native attention. |
 | [MemWM: Associative Memory-Enhanced Latent World Models for Long-Horizon Planning](https://arxiv.org/abs/2610.19683v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.19683v2) | arXiv<br>2026-10-14 | Adds content-addressable slots to latent dynamics, using diversity and balanced-use losses to discourage memory collapse. |
 | [Long-horizon Video Generation with Slot Memory Addressed By Region Tokens](https://arxiv.org/abs/2610.19257v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.19257v1) [![Web](assets/link-web.svg)](https://eren-cetin.github.io/SMART/) | arXiv<br>2026-10-13 | Addresses constant-size recurrent slots with camera-region tokens and uses confidence to regulate reliance on memory. |
@@ -220,12 +224,16 @@ Addressable evidence through retrieval, geometry, maps, and view consistency.
 
 <a id="world-models--persistent-state"></a>
 
-### 🌍 Persistent world state · 39
+### 🌍 Persistent world state · 43
 
 Entity persistence, object permanence, state revision, and shared worlds.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [BWM-Forge: Agentic World Programming for Embodied Intelligence](https://arxiv.org/abs/2611.16221v1) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.16221v1) | arXiv<br>2026-11-12 | Uses editable scene programs and reusable experience to coordinate agentic robot-video generation. |
+| [Physical Experience Builds Continual Spatial World Models](https://arxiv.org/abs/2611.04016v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.04016v1) | arXiv<br>2026-11-02 | Accumulates revisable spatial-change and action-outcome experience for continual world prediction. |
+| [AgiWorld: An Agentic Video World Model for Building Persistent Worlds](https://arxiv.org/abs/2611.02341v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.02341v1) | arXiv<br>2026-11-02 | Couples a planning agent and video generator through shared spatial memory and reliability-aware maintenance. |
+| [Old Is Not False: Valid-Time Memory for Interactive Video World Models](https://arxiv.org/abs/2611.00758v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.00758v1) | arXiv<br>2026-10-31 | Separates capture time from state-valid time so older views can represent a reverted current world. |
 | [WorldPager: Zero-Stall Tiered Memory for Long-Horizon World Models on a Single Consumer GPU](https://arxiv.org/abs/2610.35529v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.35529v1) | arXiv<br>2026-10-26 | Tiers historical KV across GPU, host memory, and NVMe with pose-driven prefetching and asynchronous write-back. |
 | [Persistent Planar Memory for Video World Models](https://arxiv.org/abs/2610.23795v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.23795v1) [![GitHub stars](https://img.shields.io/github/stars/robbyant-research/PPMem.svg?style=social&label=Star)](https://github.com/robbyant-research/PPMem) [![Web](assets/link-web.svg)](https://hyzcluster.github.io/ppmem) | NeurIPS 2026<br>2026-10-16 | Accumulates scene geometry as plane primitives and conditions subsequent video generation on rendered memory depth. |
 | [REEL: Learning to Retrieve, Evaluate, and Evolve Visual Memory for Any Long-Horizon Multi-Shot Video Generation](https://arxiv.org/abs/2610.16632v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.16632v1) [![GitHub stars](https://img.shields.io/github/stars/xuhang07/REEL.svg?style=social&label=Star)](https://github.com/xuhang07/REEL) [![Web](assets/link-web.svg)](https://xuhang07.github.io/REEL) | arXiv<br>2026-10-12 | Learns reference retrieval, missing-evidence generation, and memory updates through cross-shot reinforcement learning and generator adapters. |
@@ -268,12 +276,13 @@ Entity persistence, object permanence, state revision, and shared worlds.
 
 <a id="world-models--predictive-control"></a>
 
-### 🔮 Imagination & action coupling · 29
+### 🔮 Imagination & action coupling · 30
 
 World prediction linked to planning and control; predictions are distinguished from observed memory.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations](https://arxiv.org/abs/2611.04870v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.04870v1) | arXiv<br>2026-11-03 | Combines multiview action conditioning with fast video generation and hierarchical slow memory for simulation. |
 | [RAP-WAM: Learning World-Action Models through Predictive Rehearsal and Action Perturbations](https://arxiv.org/abs/2610.16443v2) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.16443v2) [![GitHub stars](https://img.shields.io/github/stars/heyuanpengpku/RAP-WAM.svg?style=social&label=Star)](https://github.com/heyuanpengpku/RAP-WAM) [![Web](assets/link-web.svg)](https://rapwam.github.io/) | arXiv<br>2026-10-12 | Combines predictive rehearsal during training with short-term plan-tail blending during deployment, rather than storing observed events. |
 | [Video Prediction Policy 2: Predict Better, Act Better](https://arxiv.org/abs/2610.10270v4) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.10270v4) [![GitHub stars](https://img.shields.io/github/stars/roboterax/video-prediction-policy-2.svg?style=social&label=Star)](https://github.com/roboterax/video-prediction-policy-2) [![Web](assets/link-web.svg)](https://robert-gyj.github.io/video-prediction-policy-2) | arXiv<br>2026-10-07 | Connects a visual planner to action prediction; the RoboDojo variant adds sampled history and an episode anchor. |
 | [InternW0-Delta: A World Action Model Bridging Predictive Dynamics and Actions with 20K+ Hours of Open Data](https://arxiv.org/abs/2609.31394v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.31394v1) [![Web](assets/link-web.svg)](https://internrobotics.github.io/InternW0-Delta/) | arXiv<br>2026-09-25 | Connects predictive dynamics to actions, with anchor, recent and current observations in the RoboDojo deployment. |
@@ -306,12 +315,13 @@ World prediction linked to planning and control; predictions are distinguished f
 
 <a id="world-models--learning-runtime"></a>
 
-### ⚙️ Learning, adaptation & runtime · 15
+### ⚙️ Learning, adaptation & runtime · 16
 
 Memory-relevant training, consolidation, adaptation, cache validity and execution timing; labeled contextual when no online memory mechanism is established.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [Encoding Memory in World Models with Test-Time Model-Based Reinforcement Learning](https://arxiv.org/abs/2611.09625v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.09625v1) | arXiv<br>2026-11-06 | Encodes episode observations into world-model parameters through test-time model-based reinforcement learning. |
 | [PICA-WAM: Visual Perturbation Invariance via Cross-Appearance Self-Alignment in World Action Models](https://arxiv.org/abs/2610.26813v1) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.26813v1) [![GitHub stars](https://img.shields.io/github/stars/YudeZou/PICA-WAM-release.svg?style=social&label=Star)](https://github.com/YudeZou/PICA-WAM-release) | arXiv<br>2026-10-19 | Aligns action representations across visual perturbations using an EMA teacher, without introducing online episodic storage. |
 | [Memorizon: Training World Models Beyond Their Context Window](https://arxiv.org/abs/2610.00544v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.00544v1) [![GitHub stars](https://img.shields.io/github/stars/TingtingLiao/memorizon.svg?style=social&label=Star)](https://github.com/TingtingLiao/memorizon) [![Web](assets/link-web.svg)](https://tingtingliao.github.io/memorizon) | arXiv<br>2026-09-30 | Extends training supervision beyond the active context and maintains a bounded covisibility-based retrieval bank. |
 | [Self-Aligned Forcing: Streaming Video Diffusion with Differentiable Noisy History](https://arxiv.org/abs/2609.38114v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.38114v1) [![Web](assets/link-web.svg)](https://anonymous.4open.science/w/self-aligned-forcing/) | arXiv<br>2026-09-29 | Makes noisy historical key-value states differentiable so future losses can optimize their representations. |
@@ -399,12 +409,13 @@ Observation histories and cache interfaces consumed by action policies.
 
 <a id="vla--compression-recurrence"></a>
 
-### 🧠 Compressed & recurrent memory · 43
+### 🧠 Compressed & recurrent memory · 44
 
 Visual token pooling, learned history compression, recurrent tokens, and compact belief states for action policies.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [PREM: Prediction-Regulated Memory for Robot Manipulation](https://arxiv.org/abs/2611.00634v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.00634v1) | arXiv<br>2026-10-31 | Uses future-feature prediction to train visual memory and regulate spatially selective state updates. |
 | [Variational Cognitive Memory Abstraction for Long-Horizon Vision-Language-Action Models](https://arxiv.org/abs/2610.34251v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.34251v1) | arXiv<br>2026-10-25 | Compresses trajectories with state-space encoding, temporal slots, and a variational objective, then gates latent memory into actions. |
 | [GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models](https://arxiv.org/abs/2610.29866v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.29866v1) | arXiv<br>2026-10-21 | Uses geometric teacher supervision and event-based history consolidation to give action policies spatially informed temporal memory. |
 | [inr2action: Encoding Robot Episodes as Neural Implicit Representations for Recall and Action](https://arxiv.org/abs/2610.28882v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.28882v1) | arXiv<br>2026-10-20 | Stores video episodes as neural implicit weight deltas and projects them into tokens for recall and action regression. |
@@ -507,12 +518,13 @@ Retained episodes and keyframes, selective writes, and retrieval of task-relevan
 
 <a id="vla--task-progress"></a>
 
-### 🪜 Task progress & plan state · 22
+### 🪜 Task progress & plan state · 24
 
 Progress records, language scratchpads, latent plans, and action continuity; intended actions are not executed facts.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [MOST: Memory of Object States and Task Progress for Long-Horizon Mobile Manipulation](https://arxiv.org/abs/2611.00734v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.00734v1) | arXiv<br>2026-10-31 | Supervises temporal memory with object-state changes and subtask progress inside an action policy. |
 | [Value as Memory: Online Value-Guided Post-training for General Robot Policies](https://arxiv.org/abs/2610.22368v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.22368v1) | arXiv<br>2026-10-15 | Uses cached value predictions as progress memory during online reinforcement-learning post-training of robot policies. |
 | [PMTRM: Pseudo-Memory Temporal Re-encoding Module for Embodied Policy Learning](https://arxiv.org/abs/2610.11168v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.11168v1) | arXiv<br>2026-10-08 | Re-encodes bounded state-action history into latent sequences, using temporal separation and reconstruction to distinguish task phases. |
 | [EvoMem-VLA: State-Evolution Memory for Long-Horizon Robot Manipulation](https://arxiv.org/abs/2610.05418v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.05418v1) | arXiv<br>2026-10-04 | Encodes ordered frame pairs as directional change tokens to retain interaction outcomes and track manipulation progress. |
@@ -524,6 +536,7 @@ Progress records, language scratchpads, latent plans, and action continuity; int
 | [LiLo-VLA: Compositional Long-Horizon Manipulation via Linked Object-Centric Policies](https://arxiv.org/abs/2602.21531v1) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2602.21531v1) [![GitHub stars](https://img.shields.io/github/stars/YY-GX/LiLo-VLA.svg?style=social&label=Star)](https://github.com/YY-GX/LiLo-VLA) [![Web](assets/link-web.svg)](https://yy-gx.github.io/LiLo-VLA/) | arXiv<br>2026-02-25 | Combines reusable object-centric interaction policies with global motion and replanning. |
 | [Notes-to-Self: Scratchpad Augmented VLAs for Memory Dependent Manipulation Tasks](https://arxiv.org/abs/2602.21013v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2602.21013v2) | ICRA 2026<br>2026-02-24 | Uses a language scratchpad to retain spatial information, plans, and execution progress. |
 | [Action-Sketcher: From Reasoning to Action via Visual Sketches for Long-Horizon Robotic Manipulation](https://arxiv.org/abs/2601.01618v1) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2601.01618v1) [![GitHub stars](https://img.shields.io/github/stars/FlagOpen/Action-Sketcher.svg?style=social&label=Star)](https://github.com/FlagOpen/Action-Sketcher) [![Web](assets/link-web.svg)](https://action-sketcher.github.io) | arXiv<br>2026-01-04 | Expresses spatial intent through visual sketches and revises plans and actions through repeated feedback. |
+| [Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots with Advanced Embodied Reasoning, Thinking, and Motion Transfer](https://arxiv.org/abs/2510.03342v3) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2510.03342v3) | arXiv<br>2025-10-02 | Pairs embodied reasoning with multi-embodiment action generation and interleaved language reasoning. |
 | [Long-VLA: Unleashing Long-Horizon Capability of Vision Language Action Model for Robot Manipulation](https://arxiv.org/abs/2508.19958v2) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2508.19958v2) [![Web](assets/link-web.svg)](https://long-vla.github.io) | CoRL 2025<br>2025-08-27 | Uses stage-dependent input masking to coordinate movement and contact phases in long-horizon control. |
 | [LoHoVLA: A Unified Vision-Language-Action Model for Long-Horizon Embodied Tasks](https://arxiv.org/abs/2506.00411v1) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2506.00411v1) | arXiv<br>2025-05-31 | Jointly generates subtask language and actions within a hierarchical closed-loop policy. |
 | [DexGraspVLA: A Vision-Language-Action Framework Towards General Dexterous Grasping](https://arxiv.org/abs/2502.20900v5) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2502.20900v5) [![GitHub stars](https://img.shields.io/github/stars/Psi-Robot/DexGraspVLA.svg?style=social&label=Star)](https://github.com/Psi-Robot/DexGraspVLA) [![Web](assets/link-web.svg)](https://dexgraspvla.github.io) | arXiv<br>2025-02-28 | Combines high-level visual-language planning and low-level diffusion control for dexterous grasping and recovery. |
@@ -538,12 +551,13 @@ Progress records, language scratchpads, latent plans, and action continuity; int
 
 <a id="vla--action-touch"></a>
 
-### ✋ Spatial, action & touch history · 31
+### ✋ Spatial, action & touch history · 32
 
 Object traces, geometry, executed actions, proprioception, contact and tactile history.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [STVLA: Spatial-aware and Temporal-memory forVision-Language-Action Models](https://arxiv.org/abs/2611.16589v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.16589v1) [![Web](assets/link-web.svg)](https://stvla.github.io/) | arXiv<br>2026-11-12 | Combines geometric features and selected temporal evidence to guide manipulation under changing views. |
 | [PACE: Temporal-Role Tactile Conditioning for Chunk-Based Insertion Policies](https://arxiv.org/abs/2610.16308v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.16308v1) [![Web](assets/link-web.svg)](https://pace-insertion.github.io/) | CoRL 2026<br>2026-10-12 | Separates persistent contact conditioning, abrupt-event action correction, and future-contact training supervision for insertion policies. |
 | [ActMem-VLA: Action-History Memory with Dual-Expert Denoising for Long-Horizon Vision-Language-Action Policies](https://arxiv.org/abs/2609.37307v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.37307v2) | arXiv<br>2026-09-29 | Encodes executed actions with Mamba to guide early denoising before a frozen expert refines the action. |
 | [BEACON: Belief-Enabled Adaptive CONtrol for Imitation Learning under Uncertainty](https://arxiv.org/abs/2609.22730v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.22730v1) | arXiv<br>2026-09-19 | Conditions diffusion actions on explicit Bayesian hidden-state beliefs and uncertainty for partially observed contact manipulation. |
@@ -578,12 +592,13 @@ Object traces, geometry, executed actions, proprioception, contact and tactile h
 
 <a id="vla--learning-runtime"></a>
 
-### ⚙️ Learning, adaptation & runtime · 14
+### ⚙️ Learning, adaptation & runtime · 17
 
 Memory-relevant training, consolidation, adaptation, cache validity and execution timing; labeled contextual when no online memory mechanism is established.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [Asynchronous Robot Policies](https://arxiv.org/abs/2611.05155v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.05155v1) [![Web](assets/link-web.svg)](https://arp.insait.ai) | arXiv<br>2026-11-03 | Decouples slow semantic memory updates from fast action generation and trains for asynchronous staleness. |
 | [Zeva-Ego: Egocentric Mid-Training with In-Context Causal Learning for Robot Manipulation](https://arxiv.org/abs/2609.24411v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.24411v2) | arXiv<br>2026-09-21 | Uses action-centered egocentric mid-training and action-effect context for online adaptation. |
 | [Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision](https://arxiv.org/abs/2609.20820v3) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.20820v3) | CoRL 2026<br>2026-09-17 | Distills salient historical information into workspace tokens through set-reconstruction supervision. |
 | [Zeva: In-Context Causal Learning for Generalizable Embodied Manipulation](https://arxiv.org/abs/2608.30880v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2608.30880v2) | arXiv<br>2026-08-31 | Stores executed actions and observed effects at two timescales for adaptation of a frozen policy. |
@@ -594,19 +609,22 @@ Memory-relevant training, consolidation, adaptation, cache validity and executio
 | [VLA Knows Its Limits: Adaptive Execution Horizons for Robot Policies](https://arxiv.org/abs/2602.21445v2) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2602.21445v2) [![GitHub stars](https://img.shields.io/github/stars/hatchetProject/AutoHorizon.svg?style=social&label=Star)](https://github.com/hatchetProject/AutoHorizon) [![Web](assets/link-web.svg)](https://hatchetproject.github.io/autohorizon/) | ECCV 2026<br>2026-02-24 | Uses action attention to adapt the executed horizon and study open-loop versus closed-loop control. |
 | [LongNav-R1: Horizon-Adaptive Multi-Turn RL for Long-Horizon VLA Navigation](https://arxiv.org/abs/2602.12351v2) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2602.12351v2) [![GitHub stars](https://img.shields.io/github/stars/UMich-CURLY/LongNav-R1.svg?style=social&label=Star)](https://github.com/UMich-CURLY/LongNav-R1) | RSS 2026<br>2026-02-12 | Uses multi-turn reinforcement learning, horizon-dependent credit assignment, and visual-token pruning for navigation. |
 | [Recurrent-Depth VLA: Implicit Test-Time Compute Scaling of Vision-Language-Action Models via Latent Iterative Reasoning](https://arxiv.org/abs/2602.07845v1) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2602.07845v1) [![Web](assets/link-web.svg)](https://rd-vla.github.io/) | arXiv<br>2026-02-08 | Iterates a shared action-head computation with adaptive stopping to scale reasoning depth. |
+| [Training-Time Action Conditioning for Efficient Real-Time Chunking](https://arxiv.org/abs/2512.05964v2) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2512.05964v2) | arXiv<br>2025-12-05 | Trains policies with committed action prefixes to reduce asynchronous real-time chunking overhead. |
 | [GR-RL: Going Dexterous and Precise for Long-Horizon Robotic Manipulation](https://arxiv.org/abs/2512.01801v3) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2512.01801v3) | arXiv<br>2025-12-01 | Combines progress-based filtering, symmetry augmentation, and online reinforcement learning for precise manipulation. |
 | [Mixture of Horizons in Action Chunking](https://arxiv.org/abs/2511.19433v2) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2511.19433v2) [![GitHub stars](https://img.shields.io/github/stars/Timsty1/MixtureOfHorizons.svg?style=social&label=Star)](https://github.com/Timsty1/MixtureOfHorizons) [![Web](assets/link-web.svg)](https://timsty1.github.io/moh/) | ICML 2026<br>2025-11-24 | Combines action predictions at multiple horizons and uses consistency to select execution length. |
 | [EvoVLA: Self-Evolving Vision-Language-Action Model](https://arxiv.org/abs/2511.16166v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2511.16166v1) [![GitHub stars](https://img.shields.io/github/stars/AIGeeksGroup/EvoVLA.svg?style=social&label=Star)](https://github.com/AIGeeksGroup/EvoVLA) [![Web](assets/link-web.svg)](https://aigeeksgroup.github.io/EvoVLA) | arXiv<br>2025-11-20 | Uses stage-aligned rewards, pose exploration, and selective history to address progress hallucination. |
 | [EgoVLA: Learning Vision-Language-Action Models from Egocentric Human Videos](https://arxiv.org/abs/2507.12440v3) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2507.12440v3) [![GitHub stars](https://img.shields.io/github/stars/RchalYang/EgoVLA_Release.svg?style=social&label=Star)](https://github.com/RchalYang/EgoVLA_Release) [![Web](assets/link-web.svg)](https://rchalyang.github.io/EgoVLA) | arXiv<br>2025-07-16 | Transfers information from human egocentric video through retargeting and robot demonstrations. |
+| [Real-Time Execution of Action Chunking Flow Policies](https://arxiv.org/abs/2506.07339v2) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2506.07339v2) [![Web](assets/link-web.svg)](https://pi.website/research/real_time_chunking) | arXiv<br>2025-06-09 | Maintains action continuity by conditioning new chunks on already committed actions during asynchronous inference. |
 
 <a id="vla--evaluation"></a>
 
-### 🧪 Memory-sensitive policy evaluation · 25
+### 🧪 Memory-sensitive policy evaluation · 26
 
 Non-Markovian tasks, interference, control dependence, and policy evaluation context.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies](https://arxiv.org/abs/2611.14488v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.14488v1) | arXiv<br>2026-11-10 | Reveals temporal shortcuts where null actions advance sampled memory and cause phantom task progress. |
 | [Tracking Task Progress Through Errors and Recovery:A Benchmark and Recurrent Distributional Model](https://arxiv.org/abs/2610.39125v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.39125v1) | arXiv<br>2026-10-29 | Combines error-annotated manipulation episodes with recurrent visual memory and distributional progress tracking through mistakes and recovery. |
 | [Beyond Success Rate: Interventional Evaluation of Memory in Vision-Language-Action Systems](https://arxiv.org/abs/2610.23372v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.23372v1) | arXiv<br>2026-10-16 | Uses fact-changing, fact-preserving, numerical, and copy interventions to distinguish memory use from outcome sensitivity. |
 | [When Does Retrieval Help? A Study of In-Context Adaptation in Vision-Language-Action Models](https://arxiv.org/abs/2610.05492v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.05492v1) | NeurIPS 2026 Workshop · PTA<br>2026-10-04 | Compares demonstration retrieval rules and tests whether retrieval diagnostics predict downstream success and cross-task adaptation. |
@@ -641,12 +659,14 @@ Non-Markovian tasks, interference, control dependence, and policy evaluation con
 
 <a id="agentic-robotics--episodic-retrieval"></a>
 
-### 🗂️ Episodic experience & retrieval · 27
+### 🗂️ Episodic experience & retrieval · 29
 
 Time-indexed experience that an embodied agent can revisit and use.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [Remember What Changes the Odds: Critic-Gated Event Memory for Long-Horizon Manipulation](https://arxiv.org/abs/2611.16386v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.16386v1) | arXiv<br>2026-11-12 | Writes progress and failure events when a critic predicts a substantial change in eventual success. |
+| [Learning to Live: A Step Toward Lifelong Embodied Intelligence](https://arxiv.org/abs/2611.00180v3) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.00180v3) | arXiv<br>2026-10-30 | Uses streaming event gates, revisable evidence stores, and validated skill consolidation for continuous robot experience. |
 | [When Successful Memories Mislead Embodied Agents:Memory Adaption For Task-Conditioned Execution](https://arxiv.org/abs/2609.35808v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.35808v1) | arXiv<br>2026-09-20 | Adapts retrieved trajectories by removing stale control context and extracting condition-action-effect structure within a bounded planning budget. |
 | [MEMORA: Embodied Action Memory from Egocentric Videos for Reasoning and Planning](https://arxiv.org/abs/2607.14252v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2607.14252v2) [![GitHub stars](https://img.shields.io/github/stars/yuzihaowashu/MEMORA.svg?style=social&label=Star)](https://github.com/yuzihaowashu/MEMORA) | EMNLP 2026<br>2026-07-15 | Separates environment, entity, activity, and inferred knowledge, combining online evidence revision with offline routine consolidation. |
 | [eMEM: A Hybrid Spatio-Temporal Memory System For Embodied Agents](https://arxiv.org/abs/2606.03374v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2606.03374v2) | arXiv<br>2026-06-02 | Combines semantic, spatial, and structured memory indexes with hierarchical consolidation, recall tools, and diagnostic embodied evaluations. |
@@ -677,12 +697,15 @@ Time-indexed experience that an embodied agent can revisit and use.
 
 <a id="agentic-robotics--semantic-spatial"></a>
 
-### 🗺️ Semantic & spatial memory · 42
+### 🗺️ Semantic & spatial memory · 45
 
 Maps, scene graphs, entities, and grounded knowledge across observations.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [Compass 1: Towards Open-World and Persistent Embodied Navigation from Monocular RGB Videos](https://arxiv.org/abs/2611.12087v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.12087v1) [![Web](assets/link-web.svg)](https://www.archon.tech/research/compass1) | arXiv<br>2026-11-09 | Pairs sparse visual history with an explicit history map and supervision for persistent navigation. |
+| [Fast and Reliable Open-Vocabulary Object Search with Absence Detection from Robot Memory](https://arxiv.org/abs/2611.07493v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.07493v1) | arXiv<br>2026-11-05 | Separates fast memory retrieval from visual verification to detect both object presence and absence. |
+| [SPARK: Self-Correcting Embodied Memory via Physical Re-Observation](https://arxiv.org/abs/2611.00344v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.00344v1) | arXiv<br>2026-10-30 | Repairs embodied memory through targeted physical re-observation and selective knowledge-base merging. |
 | [Analytic Concept-Centric Memory for Agentic Embodied Manipulation](https://arxiv.org/abs/2606.29774v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2606.29774v1) | arXiv<br>2026-06-29 | Links object parts, poses, affordances, state transitions, and executable skills in structured memory. |
 | [HoloAgent-0: A Unified Embodied Agent Framework with 3D Spatial Memory](https://arxiv.org/abs/2606.23565v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2606.23565v1) | arXiv<br>2026-06-22 | Coordinates heterogeneous robot skills through an operating layer, 3D spatial memory, skill graphs, and monitored execution. |
 | [EvoMemNav: Efficient Self-Evolving Fine-Grained Memory for Zero-Shot Embodied Navigation](https://arxiv.org/abs/2606.03509v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2606.03509v1) | arXiv<br>2026-06-02 | Retains visual views in hierarchical spatial memory and writes reflected environmental priors back after subtasks. |
@@ -728,15 +751,18 @@ Maps, scene graphs, entities, and grounded knowledge across observations.
 
 <a id="agentic-robotics--task-state-planning"></a>
 
-### 📋 Task state & long-horizon planning · 25
+### 📋 Task state & long-horizon planning · 28
 
 Persistent subgoals, progress records, semantic updates, and visual cues passed from planners to VLA/WAM executors.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation](https://arxiv.org/abs/2611.02660v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.02660v1) [![Web](assets/link-web.svg)](https://kimspacehuni.github.io/HeLM/) | arXiv<br>2026-11-02 | Maintains hierarchical language memory through event detection and event-triggered updates across manipulation episodes. |
+| [FEIJOA: Task-Driven Grounding and Execution for Mobile Manipulation](https://arxiv.org/abs/2611.04080v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.04080v1) [![Web](assets/link-web.svg)](https://williamshen-nz.github.io/feijoa/) | arXiv<br>2026-11-02 | Grounds instructions against posed scans and verifies skill preconditions and effects during mobile manipulation. |
 | [EventSync: Event-Driven Memory Updates for History-Dependent Manipulation](https://arxiv.org/abs/2610.27917v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.27917v1) | arXiv<br>2026-10-20 | Uses visual and motion evidence to verify subgoal completion before updating history and triggering further VLA planning. |
 | [REMM: Revisable Embodied Memory for Manipulation](https://arxiv.org/abs/2610.12710v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.12710v1) [![Web](assets/link-web.svg)](https://revanthsenthil.github.io/remm/) | arXiv<br>2026-10-08 | Separates append-only evidence from revisable task state, retracting dependent completion claims and scheduling recovery when supporting facts change. |
-| [2AM: Grounding Agent-Side Memory as Guidance for Steerable Action Models in Long-Horizon Manipulation](https://arxiv.org/abs/2609.11308v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.11308v1) | arXiv<br>2026-09-10 | Keeps memory in an agent and guides a stateless action model with subtask language and spatial hints. |
+| [Simple Agentic Memory for Generalist Robot Policies](https://arxiv.org/abs/2609.36595v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.36595v1) [![Web](assets/link-web.svg)](https://simplearm.github.io/) | arXiv<br>2026-09-29 | Maintains typed interaction state and grounds recalled entities before steering frozen robot policies. |
+| [2AM: Grounding Agent-Side Memory as Guidance for Steerable Action Models in Long-Horizon Manipulation](https://arxiv.org/abs/2609.11308v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.11308v2) | arXiv<br>2026-09-10 | Grounds agent memory through language and 2D hints that steer an episodically stateless RGB action model. |
 | [Safe Task Planning with Long-Term Graph Memory for Embodied Agents](https://arxiv.org/abs/2609.08444v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.08444v1) [![GitHub stars](https://img.shields.io/github/stars/lty759/SafeMem.svg?style=social&label=Star)](https://github.com/lty759/SafeMem) [![Web](assets/link-web.svg)](https://sites.google.com/view/safemem) | CoRL 2026<br>2026-09-08 | Consults long-term object-relation graphs to predict out-of-view hazards and trigger risk-aware robot replanning. |
 | [AGM: Achievement-Grounded Memory for Closed-Loop Agents with Frozen VLA Policies](https://arxiv.org/abs/2608.29537v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2608.29537v2) | arXiv<br>2026-08-30 | Advances a subgoal progress pointer only after physical verification, preventing attempted actions from becoming unsupported completion memory. |
 | [τ_0-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](https://arxiv.org/abs/2608.16885v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2608.16885v1) [![GitHub stars](https://img.shields.io/github/stars/sii-research/tau-0-vla.svg?style=social&label=Star)](https://github.com/sii-research/tau-0-vla) [![Web](assets/link-web.svg)](https://tau0-vla.github.io/) | arXiv<br>2026-08-17 | Uses execution memory for subtask proposals and world-model-guided search with perturbed progress-memory training. |
@@ -762,21 +788,34 @@ Persistent subgoals, progress records, semantic updates, and visual cues passed 
 
 <a id="agentic-robotics--procedural-harness"></a>
 
-### 🛠️ Skills, programs & harnesses · 35
+### 🛠️ Skills, programs & harnesses · 50
 
 Executable skills, program state, tool runtimes, and state handoff.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [Reins: Frontier Multimodal Models Driving Real Robot Arms on Long-Horizon Tasks, Zero-Shot](https://arxiv.org/abs/2611.16632v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.16632v1) | arXiv<br>2026-11-12 | Combines guarded atomic actions with a continuous visual narrator for long-horizon real-robot control. |
+| [HeMeR: Heterogeneous Memory Reconciliation for Embodied Agents via Structured KV Reuse](https://arxiv.org/abs/2611.16487v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.16487v1) | arXiv<br>2026-11-12 | Reconciles reusable KV states with changing declarative, procedural, and working memories. |
+| [REINS: A Self-Evolving Agent Harness for Real-Time Trajectory Planning](https://arxiv.org/abs/2611.10748v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.10748v1) [![GitHub stars](https://img.shields.io/github/stars/ZhihongCui/REINS.svg?style=social&label=Star)](https://github.com/ZhihongCui/REINS) | arXiv<br>2026-11-07 | Consolidates verified planning outputs into indexed rules so familiar scenes avoid repeated language-model calls. |
+| [On Agentic Manipulation Policies](https://arxiv.org/abs/2611.09892v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.09892v1) [![Web](assets/link-web.svg)](https://apple-aiml-research.github.io/ml-amp/) | arXiv<br>2026-11-06 | Studies generalist manipulation through a shared tool harness and cross-episode persistent memory. |
+| [HITCH: Teaching a Vision-Language Model to Operate a Humanoid through a Whole-Body Harness](https://arxiv.org/abs/2611.08039v1) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.08039v1) [![Web](assets/link-web.svg)](https://hitch.axell.top/) | arXiv<br>2026-11-05 | Connects visual point selection to whole-body motion through a learned tracker and interface-specific training. |
+| [DiMuRe: Diagnosis-Guided Multilevel Recovery for Robotic Task Execution](https://arxiv.org/abs/2611.04226v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.04226v1) | arXiv<br>2026-11-03 | Uses phase evidence and preconditions to select local recovery, program reuse, or terminal replanning. |
+| [Serving Agentic Robot Fleets: Workload Characterization, KV-Cache Thrashing, and Admission Control](https://arxiv.org/abs/2611.01404v1) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.01404v1) | arXiv<br>2026-11-01 | Characterizes growing brain contexts, action deadlines, and KV-cache contention in robot fleets. |
+| [Democratizing Robot-Use Agents: A Unified Harness with Open Models](https://arxiv.org/abs/2611.01560v2) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.01560v2) | arXiv<br>2026-11-01 | Provides a unified robot-use harness for open-weight models and capability-oriented further training. |
+| [Auriga Technical Report: A Task-Agnostic Agent Harness for Zero-Shot Embodied Manipulation](https://arxiv.org/abs/2611.01112v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.01112v1) [![GitHub stars](https://img.shields.io/github/stars/lose4578/Auriga.svg?style=social&label=Star)](https://github.com/lose4578/Auriga) [![Web](assets/link-web.svg)](https://auriga.stelledge.com/) | arXiv<br>2026-10-31 | Combines explicit task belief, calibrated geometry, motion admission, and execution monitoring for direct robot use. |
+| [TinyAstral: Transferring Self-Evolving Harnesses to Tiny Generalist Manipulation Agents](https://arxiv.org/abs/2610.41216v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.41216v2) [![Web](assets/link-web.svg)](https://garfield-kh.github.io/TinyAstral/) | arXiv<br>2026-10-30 | Distills a compact planner inside a frozen, statistically screened self-improved robot harness. |
+| [REA: A Routed Embodied Agent Runtime for Asynchronous Brain-Cerebellum Control](https://arxiv.org/abs/2610.42053v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.42053v1) | arXiv<br>2026-10-30 | Coordinates asynchronous reasoning and reactive policies with route memory and bounded recovery escalation. |
 | [Ask to Evolve: A Unified Harness for Lifelong Embodied Navigation with Hybrid Action Space and Persistent Memory](https://arxiv.org/abs/2610.39446v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.39446v1) | arXiv<br>2026-10-29 | Links observations and dialogue to persistent place memory, combining navigation actions, active clarification, and experience reuse. |
 | [Compile Once, Run Cheap: Frozen, Portable Skills for Embodied Agents, and What Recursive Self-Improvement Adds](https://arxiv.org/abs/2610.25114v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.25114v1) [![GitHub stars](https://img.shields.io/github/stars/Orillusion/embodied-skill-rsi.svg?style=social&label=Star)](https://github.com/Orillusion/embodied-skill-rsi) | arXiv<br>2026-10-18 | Authors and repairs robot skills offline, then freezes executable artifacts for deployment and cross-executor reuse. |
 | [InstAgent: A Recursively Self-Improving Agent Operating System for Heterogeneous Robot Collaboration](https://arxiv.org/abs/2610.23098v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.23098v1) | arXiv<br>2026-10-16 | Persists feedback-revised robot collaboration behavior trees and shares spatiotemporal memory for task allocation and verified handoffs. |
-| [HexaShell: A Thin Harness for Exploring the Limits of VLM Agents as Robot Coding Agents](https://arxiv.org/abs/2610.23479v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.23479v2) [![GitHub stars](https://img.shields.io/github/stars/HexaFuture/HexaShell.svg?style=social&label=Star)](https://github.com/HexaFuture/HexaShell) | arXiv<br>2026-10-16 | Consolidates development traces into executable tools and compact notes, frozen before evaluation. |
+| [HexaShell: A Universal Harness for Robot Coding Agents in Simulation and the Real World](https://arxiv.org/abs/2610.23479v3) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.23479v3) [![GitHub stars](https://img.shields.io/github/stars/HexaFuture/HexaShell.svg?style=social&label=Star)](https://github.com/HexaFuture/HexaShell) | arXiv<br>2026-10-16 | Uses coding agents, persistent tools, and execution evidence to build robot programs inside a thin harness. |
 | [EnactOpt: Diagnosis-Guided Harness Evolution for Embodied Agents](https://arxiv.org/abs/2610.14977v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.14977v1) | arXiv<br>2026-10-10 | Diagnoses execution against actual model inputs and actions to evolve reusable skills and context-construction code. |
 | [Embodied Turing Machines: Stateful Code for Robot Recursive Self-Improvement](https://arxiv.org/abs/2610.12369v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.12369v1) | arXiv<br>2026-10-08 | Encodes explicit robot and task state in executable programs, preserving shared capabilities through a development-time code revision loop. |
 | [EMHO: EMbodied Agent Harness Optimization via Experience Traces](https://arxiv.org/abs/2610.08432v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.08432v1) | arXiv<br>2026-10-06 | Revises execution harnesses from trajectories and prior versions, adjusting monitoring, visual grounding, and failure responses around frozen models. |
 | [Fewer Tokens, Better Action: GPT-6 Astra Robot Agents with 14% Higher Success Rate but 65% Fewer Tokens](https://arxiv.org/abs/2610.01939v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.01939v2) | arXiv<br>2026-10-01 | Retains episode-local Python state and selectively requests feedback, with cross-episode memory disabled during evaluation. |
 | [Where Memory Belongs: Ledger, an Object Ledger for Memory-Augmented VLAs](https://arxiv.org/abs/2609.34554v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.34554v1) | arXiv<br>2026-09-28 | Separates short-term in-policy visual history from an external spatiotemporal object ledger queried by a step-level planner. |
+| [World Action Agent: Harnessing VLMs for Robot Manipulation via World Action Rehearsal](https://arxiv.org/abs/2609.29964v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.29964v1) | arXiv<br>2026-09-24 | Combines action rehearsal, contact views, and reviewed multimodal skills within a visual robot workspace. |
+| [HarnessPAI: An Evolving Harness for Physical AI](https://arxiv.org/abs/2609.29166v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.29166v2) [![Web](assets/link-web.svg)](https://darwin-agent.github.io/HarnessPAI) | arXiv<br>2026-09-24 | Evolves executable programs across rollouts and consolidates failures into reusable skills and training data. |
 | [AdaHVLA: Adaptive Harnesses for Long-Horizon Vision-Language-Action Execution](https://arxiv.org/abs/2609.29204v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.29204v1) | arXiv<br>2026-09-24 | Revises coordination code from execution evidence and records hypotheses, changes, and evaluations in a revision graph. |
 | [RegenHarness: A Robot Agent Harness with Evidence-Gated Recursive Self-Improvement](https://arxiv.org/abs/2609.27612v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.27612v1) | arXiv<br>2026-09-23 | Separates proposals, termination, and verified completion through versioned memory and evidence-gated harness revision with regression checks. |
 | [EmbodiedSWE: Coding Agents for Long Horizon Dexterous Robotics](https://arxiv.org/abs/2609.27308v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.27308v2) | arXiv<br>2026-09-23 | Studies reusable dexterous robot programs and expands solved code into diverse demonstrations for VLA training. |
@@ -787,7 +826,9 @@ Executable skills, program state, tool runtimes, and state handoff.
 | [SkillMemo: Expert-guided Skill Memory Framework for Compositional Embodied Manipulation](https://arxiv.org/abs/2608.05970v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2608.05970v1) | arXiv<br>2026-08-06 | Stores skill features in key-value memory and fuses them through expert gating and reliability estimates. |
 | [Towards the Harness of Embodied Agents](https://arxiv.org/abs/2608.11246v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2608.11246v1) [![GitHub stars](https://img.shields.io/github/stars/EIT-HAI/Thea.svg?style=social&label=Star)](https://github.com/EIT-HAI/Thea) [![Web](assets/link-web.svg)](https://eit-hai.github.io/thea) | arXiv<br>2026-08-03 | Combines callable robot tools with persistent scene graphs and structured outcome feedback for agentic long-horizon execution. |
 | [Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents](https://arxiv.org/abs/2607.08448v5) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2607.08448v5) [![GitHub stars](https://img.shields.io/github/stars/RLinf/RPent.svg?style=social&label=Star)](https://github.com/RLinf/RPent) | arXiv<br>2026-07-09 | Stores traces, success rules, and failure models to coordinate retryable frozen-VLA primitives with planning and recovery. |
+| [ASPIRE: Agentic /Skills Discovery for Robotics](https://arxiv.org/abs/2607.00272v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2607.00272v2) [![GitHub stars](https://img.shields.io/github/stars/NVlabs/ASPIRE.svg?style=social&label=Star)](https://github.com/NVlabs/ASPIRE) [![Web](assets/link-web.svg)](https://research.nvidia.com/labs/gear/aspire/) | arXiv<br>2026-06-30 | Distills validated program repairs into a reusable skill library through iterative robot exploration. |
 | [Functional Cache Grafting: Robust and Rapid Code-Policy Synthesis for Embodied Agents](https://arxiv.org/abs/2606.13097v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2606.13097v2) | ICML 2026<br>2026-06-11 | Stores validated function skeletons with prompt KV caches, retrieving and patching both to synthesize new code policies. |
+| [VoLo: A Physical Orchestrator for Open-Vocabulary Long-Horizon Manipulation](https://arxiv.org/abs/2606.07723v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2606.07723v1) [![Web](assets/link-web.svg)](https://chicychen.github.io/VoLo/) | arXiv<br>2026-06-05 | Orchestrates interruptible VLA/WAM tools, perception, and motion primitives within an online physical feedback loop. |
 | [VLA-Pro: Cross-Task Procedural Memory Transfer for Vision-Language-Action Models](https://arxiv.org/abs/2605.29562v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2605.29562v2) | NeurIPS 2026<br>2026-05-28 | Treats task-specific LoRA modules as procedural memory and retrieves and fuses them using multimodal context. |
 | [CodeGraphVLP: Code-as-Planner Meets Semantic-Graph State for Non-Markovian Vision-Language-Action Models](https://arxiv.org/abs/2604.22238v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2604.22238v2) | arXiv<br>2026-04-24 | Combines a persistent semantic graph, executable planner, and progress prompts for non-Markovian tasks. |
 | [HELM: Harness-Enhanced Long-horizon Memory for Vision-Language-Action Manipulation](https://arxiv.org/abs/2604.18791v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2604.18791v1) | arXiv<br>2026-04-20 | Couples episodic retrieval with memory-conditioned failure prediction, rollback, and replanning. |
@@ -806,22 +847,32 @@ Executable skills, program state, tool runtimes, and state handoff.
 
 <a id="agentic-robotics--reflection-adaptation"></a>
 
-### 🔄 Reflection & experience adaptation · 18
+### 🔄 Reflection & experience adaptation · 28
 
 Failure analysis, experience consolidation, and adaptation across attempts.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [World In-Context Learning for Agentic Robot Manipulation](https://arxiv.org/abs/2611.12885v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.12885v1) [![GitHub stars](https://img.shields.io/github/stars/ArcheOne-AI/RoboScript.svg?style=social&label=Star)](https://github.com/ArcheOne-AI/RoboScript) [![Web](assets/link-web.svg)](https://ArcheOne-AI.github.io/RoboScript) | arXiv<br>2026-11-09 | Rehearses manipulation in simulation and freezes the resulting task memory for deployment on new scenes. |
+| [RoboACE: Adversarial Co-Evolution for Robot Self-Improvement](https://arxiv.org/abs/2611.13034v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.13034v1) | arXiv<br>2026-11-09 | Co-evolves practice curricula and execution harnesses around frozen models using fixed challenge snapshots. |
+| [Review the Episodes, Refine the Lessons: Simple Memory Evolution for Embodied Agents](https://arxiv.org/abs/2611.11509v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.11509v1) | arXiv<br>2026-11-08 | Refines bounded textual lessons on training episodes, then freezes task and working memories for deployment. |
+| [PyRUA-REAL: Robot Exploration and Adaptive Learning through RSI in the Real World](https://arxiv.org/abs/2611.06768v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.06768v1) | arXiv<br>2026-11-04 | Turns physical exploration and code refinement into persistent experience and reusable robot programs. |
+| [RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory](https://arxiv.org/abs/2610.42141v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.42141v1) [![Web](assets/link-web.svg)](https://roboarchitect-ai.github.io/) | arXiv<br>2026-10-30 | Automates harness revisions and persistent memory around frozen robot policies using rollout evidence. |
+| [Learning from Physical Experience:Context-Space Adaptation for Robotic Manipulation](https://arxiv.org/abs/2610.41320v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.41320v1) | arXiv<br>2026-10-30 | Retains applicability-conditioned lessons from physical execution to guide frozen-model manipulation. |
 | [An Agentic Framework for Proactive Robots with Procedural Assistance Memory](https://arxiv.org/abs/2610.21211v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.21211v1) [![Web](assets/link-web.svg)](https://davian-robotics.github.io/PAM/) | CoRL 2026<br>2026-10-15 | Stores assistance routines as state machines, selects VLA tasks from current context, and revises routines through reflection. |
 | [Reflect After Failure: Brain-Inspired Self-Evolving Agents for Embodied Spatial Intelligence](https://arxiv.org/abs/2610.20312v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.20312v1) | arXiv<br>2026-10-14 | Diagnoses failures across perception, exploration, and planning, retaining validated guidance and parameterized skills between execution rounds. |
 | [AdaRSI: On-Demand Recursive Self-Improvement for Embodied Agents](https://arxiv.org/abs/2610.20474v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.20474v1) | arXiv<br>2026-10-14 | Improves skills and harnesses first, then selectively fine-tunes persistent failure substeps using verified retries and transferred experience. |
+| [RoboRSI: Stable, efficient, and reusable robot self-evolution in complex real-world environments](https://arxiv.org/abs/2610.12424v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.12424v1) [![Web](assets/link-web.svg)](https://lab.noematrix.ai/blog/2-roborsi/) | arXiv<br>2026-10-08 | Scopes robot program repairs to hierarchical skill contracts and validates revisions before reuse. |
 | [Fly-by-Code: Embodied Coding Agents for Aerial Manipulation with Active Visual and Physical Feedback](https://arxiv.org/abs/2610.12549v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.12549v1) [![Web](assets/link-web.svg)](https://fly-by-code.github.io/) | arXiv<br>2026-10-08 | Generates diagnostic programs that acquire missing visual or physical feedback before revising aerial manipulation code. |
+| [PhysEvo: Astra Can Act, Let It](https://arxiv.org/abs/2610.08995v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.08995v1) | arXiv<br>2026-10-06 | Revises tools, skills, and diagnostic procedures around a frozen robot model using retained execution evidence. |
 | [ProactiveVLA: Augmenting Embodied Memory through Proactive Environment Exploration](https://arxiv.org/abs/2610.06999v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.06999v1) | arXiv<br>2026-10-04 | Uses spare interaction budget for proactive exploration and consolidates verified task and exploratory outcomes for later planning. |
 | [RE-0: Verified Recursive Improvement of Embodied Code-as-Policy Agents through Local On-Policy Distillation](https://arxiv.org/abs/2609.32416v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.32416v1) | arXiv<br>2026-09-26 | Verifies teacher corrections on student failure histories and distills locally beneficial interventions into a code-policy student. |
+| [ENPIRE: Agentic Robot Policy Self-Improvement in the Real World](https://arxiv.org/abs/2606.19980v2) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2606.19980v2) | arXiv<br>2026-06-18 | Automates real-world policy improvement through reset, rollout, verification, and code evolution. |
 | [Fail-RAG : A Retrieval Augmented Generation Informed Framework for Robot Failure Identification](https://arxiv.org/abs/2606.19598v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2606.19598v1) | arXiv<br>2026-06-17 | Retrieves contextualized failure images for vision-language analysis of unexpected events during robot operation. |
 | [EmbodiSkill: Skill-Aware Reflection for Self-Evolving Embodied Agents](https://arxiv.org/abs/2605.10332v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2605.10332v2) | arXiv<br>2026-05-11 | Distinguishes faulty skill guidance from executor noncompliance before selectively revising procedural memory from embodied failures. |
 | [Goal2Skill: Long-Horizon Manipulation with Adaptive Planning and Reflection](https://arxiv.org/abs/2604.13942v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2604.13942v2) | arXiv<br>2026-04-15 | Maintains task memory and verifies outcomes in a high-level planner supervising local control. |
 | [Evolvable Embodied Agent for Robotic Manipulation via Long Short-Term Reflection and Optimization](https://arxiv.org/abs/2604.13533v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2604.13533v2) | IJCNN 2026<br>2026-04-15 | Revises robot-planning prompts using earlier experience and new reflective lessons as adaptable external knowledge. |
+| [RoboClaw: An Agentic Framework for Scalable Long-Horizon Robotic Tasks](https://arxiv.org/abs/2603.11558v3) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2603.11558v3) [![GitHub stars](https://img.shields.io/github/stars/RoboClaw-Robotics/RoboClaw.svg?style=social&label=Star)](https://github.com/RoboClaw-Robotics/RoboClaw) | arXiv<br>2026-03-12 | Unifies collection, policy refinement, and deployment using paired forward and recovery actions. |
 | [Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs](https://arxiv.org/abs/2602.21198v3) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2602.21198v3) | arXiv<br>2026-02-24 | Uses pre-action and post-execution reflection plus hindsight reassessment to turn embodied trials into planning and policy updates. |
 | [NeSyC: A Neuro-symbolic Continual Learner For Complex Embodied Tasks In Open Domains](https://arxiv.org/abs/2503.00870v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2503.00870v2) [![GitHub stars](https://img.shields.io/github/stars/pjw971022/nesyc-LLM.svg?style=social&label=Star)](https://github.com/pjw971022/nesyc-LLM) [![Web](assets/link-web.svg)](https://pjw971022.github.io/nesyc/) | ICLR 2025<br>2025-03-02 | Forms action hypotheses, validates them symbolically, and uses memory-based error monitoring to trigger continual knowledge revision. |
 | [SECURE: Semantics-aware Embodied Conversation under Unawareness for Lifelong Robot Learning](https://arxiv.org/abs/2409.17755v3) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2409.17755v3) | CoLLAs 2025<br>2024-09-26 | Uses embodied dialogue and corrective feedback to identify missing concepts and revise knowledge for later rearrangement tasks. |
@@ -833,12 +884,21 @@ Failure analysis, experience consolidation, and adaptation across attempts.
 
 <a id="agentic-robotics--evaluation"></a>
 
-### 🧪 Embodied-agent evaluation · 10
+### 🧪 Embodied-agent evaluation · 19
 
 Embodied tasks and tests of persistent experience, reasoning, and interaction.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [HEIR: Harness Egocentric Intent for Human-Robot Interactions](https://arxiv.org/abs/2611.17238v1) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.17238v1) | arXiv<br>2026-11-12 | Pairs human intent cues with successive robot episodes to study interaction grounding and execution. |
+| [AstroMemBench: A Benchmark for Memory Systems in Embodied Spacecraft Agents](https://arxiv.org/abs/2611.16590v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.16590v1) [![GitHub stars](https://img.shields.io/github/stars/flyingView/AstroMemBench-v1.svg?style=social&label=Star)](https://github.com/flyingView/AstroMemBench-v1) | arXiv<br>2026-11-12 | Tests operational memory, session restarts, and resource constraints in deterministic spacecraft-agent scenarios. |
+| [JustRUA: A Controlled Study of GPT-6 Robot-Use Agents](https://arxiv.org/abs/2611.16009v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.16009v1) [![GitHub stars](https://img.shields.io/github/stars/ZefanW/JustRUA.svg?style=social&label=Star)](https://github.com/ZefanW/JustRUA) [![Web](assets/link-web.svg)](https://zefanw.github.io/JustRUA) | arXiv<br>2026-11-11 | Separates history, action termination, experience reuse, and geometry within one robot-use evaluation framework. |
+| [LEASH: Stay Safe in Agentic Robotics](https://arxiv.org/abs/2611.14115v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.14115v1) | arXiv<br>2026-11-10 | Evaluates robot-agent hazards and introduces task, action, and commit gates with shared policy state. |
+| [RoboARCade: Benchmarking Agentic Robot Control](https://arxiv.org/abs/2611.08209v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.08209v1) | arXiv<br>2026-11-05 | Benchmarks direct robot agents across embodiments, exposing precision failures and unsupported success claims. |
+| [VABAR: A Variational Automation Benchmark for Agentic Robotics](https://arxiv.org/abs/2611.06881v1) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.06881v1) | arXiv<br>2026-11-04 | Tests agentic manipulation under controlled task variations with executable reference skills. |
+| [Robocasa-Mem: Benchmarking Environment and Process Memory in Long-Horizon Mobile Manipulation](https://arxiv.org/abs/2611.06475v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.06475v1) | arXiv<br>2026-11-04 | Evaluates environment and process memory using future constraints derived from the robot's earlier actions. |
+| [Do Embodied VLMs Actually Use Their Scene-Graph Memory?](https://arxiv.org/abs/2611.02056v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.02056v1) | arXiv<br>2026-11-01 | Swaps scene-graph memories between episodes to test whether a VLM actually uses historical graph facts. |
+| [Answering Without Arriving: An Evidence Audit for Embodied Question Answering](https://arxiv.org/abs/2611.01958v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.01958v1) | arXiv<br>2026-11-01 | Audits whether embodied answers depend on acquired observations rather than question and route shortcuts. |
 | [DialogMem: Evaluating Dialogue-Grounded Embodied Memory in 3D Environments](https://arxiv.org/abs/2610.24767v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.24767v1) | arXiv<br>2026-10-17 | Evaluates dialogue-grounded RGB-D memory through object-language binding, record retrieval, and spatial localization for navigation and questions. |
 | [What Should Embodied Agents Remember? Benchmarking and Evaluating Memory Modality for Embodied Agents](https://arxiv.org/abs/2610.12561v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.12561v1) | arXiv<br>2026-10-08 | Separates embodied experience from later recall requests and compares memory modalities and costs without new recall-time observations. |
 | [EMBER-Bench: Benchmarking Cross-Event Causal Memory in Long-Horizon Embodied Tasks](https://arxiv.org/abs/2610.05013v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.05013v1) [![GitHub stars](https://img.shields.io/github/stars/ZHAOAlexGoat/EMBER-Bench.svg?style=social&label=Star)](https://github.com/ZHAOAlexGoat/EMBER-Bench) [![Web](assets/link-web.svg)](https://zhaoalexgoat.github.io/EMBER-Bench/) | arXiv<br>2026-10-04 | Pairs next-action selection with causal historical-event tracing to evaluate delayed dependencies in long-horizon embodied tasks. |
@@ -886,12 +946,19 @@ Transferable memory architectures and selected model/control baselines used to i
 
 <a id="foundations--agent-memory"></a>
 
-### 💭 General agent memory & runtimes · 12
+### 💭 General agent memory & runtimes · 19
 
 Language-agent memory and harness designs without a verified embodied deployment in this record.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [Discovering Effective Agent Memory Designs through Program Evolution](https://arxiv.org/abs/2611.17068v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.17068v1) [![GitHub stars](https://img.shields.io/github/stars/ash-ding/MAPE.svg?style=social&label=Star)](https://github.com/ash-ding/MAPE) | arXiv<br>2026-11-12 | Evolves memory programs while preserving raw evidence and composing retrieval for each query. |
+| [MemCredit: From Relevance to Utility for Decision-Time Memory in Long-Horizon Web Agents](https://arxiv.org/abs/2611.15600v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.15600v1) | arXiv<br>2026-11-11 | Learns memory utility from counterfactual interventions instead of relying solely on semantic relevance. |
+| [DISCERN: Preserve at Write, Resolve at Read for Persistent LLM-Agent Memory](https://arxiv.org/abs/2611.15729v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.15729v1) | arXiv<br>2026-11-11 | Preserves conflicting temporal evidence in a provenance graph and resolves identity and validity at read time. |
+| [Don't Just Trust Your Memory: Evidence-Linked Memory Reduces Memory-Induced Degradation in LLM Agents](https://arxiv.org/abs/2611.14320v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.14320v1) [![GitHub stars](https://img.shields.io/github/stars/yukyeongleee/wikitrace.svg?style=social&label=Star)](https://github.com/yukyeongleee/wikitrace) | arXiv<br>2026-11-10 | Links distilled lessons to original trajectories so agents can inspect and correct misleading experience. |
+| [Can LLM Agents Organize Their Own Memory?](https://arxiv.org/abs/2611.11929v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.11929v1) [![GitHub stars](https://img.shields.io/github/stars/Qi202/SoMem.svg?style=social&label=Star)](https://github.com/Qi202/SoMem) | arXiv<br>2026-11-09 | Lets agents organize linked memory documents while retaining evidence and validating updates. |
+| [JoMoHa: Joint Model--Harness Optimization with Reinforcement Learning](https://arxiv.org/abs/2611.11499v1) ◇ | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.11499v1) | arXiv<br>2026-11-08 | Jointly optimizes model and executable harness policies rather than adapting either in isolation. |
+| [Who Schedules Agent Memory? A Sidecar Approach to Long-Horizon Tasks](https://arxiv.org/abs/2611.00779v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.00779v1) | arXiv<br>2026-10-31 | Separates memory scheduling from task execution through event hooks and speculative retrieval. |
 | [Harnessing LLMs as Agents: What Does It Cost?](https://arxiv.org/abs/2610.02488v2) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.02488v2) | arXiv<br>2026-10-01 | Models agent resource costs including context transfer, storage, calls, recomputation, and checking. |
 | [AI Harness Engineering: A Runtime Substrate for Foundation-Model Software Agents](https://arxiv.org/abs/2605.13357v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2605.13357v1) | arXiv<br>2026-05-13 | Defines runtime responsibilities for task state, tools, observation, verification, permissions, and intervention records. |
 | [SimpleMem: Efficient Lifelong Memory for LLM Agents](https://arxiv.org/abs/2601.02553v3) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2601.02553v3) [![GitHub stars](https://img.shields.io/github/stars/aiming-lab/SimpleMem.svg?style=social&label=Star)](https://github.com/aiming-lab/SimpleMem) | arXiv<br>2026-01-05 | Combines structured semantic compression, online synthesis, and query-aware retrieval for persistent agent memory. |
@@ -907,14 +974,17 @@ Language-agent memory and harness designs without a verified embodied deployment
 
 <a id="foundations--surveys"></a>
 
-### 📚 Surveys & perspectives · 6
+### 📚 Surveys & perspectives · 9
 
 Prior syntheses and conceptual framing.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [When the Past Shapes Action: Understanding Embodied Memory](https://arxiv.org/abs/2610.41688v1) 📚 | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.41688v1) | arXiv<br>2026-10-30 | Organizes embodied memory by information requirements and architecture while distinguishing memory use from task success. |
+| [Toward Recursive Self-Improvement in Physical AI](https://arxiv.org/abs/2610.29677v1) 📚 | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.29677v1) [![Web](assets/link-web.svg)](https://physical2rsi.github.io/) | arXiv<br>2026-10-21 | Distinguishes robot behavior improvement from improvements to the process that generates future improvements. |
 | [From Sliding Windows to Self-evolving Lifelong Memory: A Dual-perspective Survey of Memory Paradigms for Long-Horizon Robotics VLA Models](https://arxiv.org/abs/2610.23319v1) 📚 | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2610.23319v1) | arXiv<br>2026-10-16 | Surveys VLA memory by scope and persistence, comparing sliding windows with increasingly durable, evolving architectures. |
 | [The Past Frames the Future: Memory for Autoregressive Video Generation](https://arxiv.org/abs/2609.28466v1) 📚 | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2609.28466v1) | arXiv<br>2026-09-23 | Organizes autoregressive video memory by forms, functions, operations, learning, and evaluation. |
+| [Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills](https://arxiv.org/abs/2608.01851v1) 📚 | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2608.01851v1) | arXiv<br>2026-08-03 | Compares robot learning in weights with executable skills and their mechanisms for continual improvement. |
 | [Externalization in LLM Agents: A Unified Review of Memory, Skills, Protocols and Harness Engineering](https://arxiv.org/abs/2604.08224v1) 📚 | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2604.08224v1) | arXiv<br>2026-04-09 | Reviews how memory, skills, interaction protocols, and harnesses externalize agent capabilities. |
 | [The AI Hippocampus: How Far are We From Human Memory?](https://arxiv.org/abs/2601.09113v1) 📚 | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2601.09113v1) | TMLR 2025<br>2026-01-14 | Reviews implicit, explicit, and agentic memory, including multimodal extensions. |
 | [Memory in the Age of AI Agents](https://arxiv.org/abs/2512.13564v2) 📚 | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2512.13564v2) | arXiv<br>2025-12-15 | Surveys agent memory through its forms, functions, dynamics, and associated evaluation settings. |
@@ -922,12 +992,13 @@ Prior syntheses and conceptual framing.
 
 <a id="foundations--evaluation"></a>
 
-### 🧪 General evaluation & datasets · 7
+### 🧪 General evaluation & datasets · 8
 
 Supporting memory benchmarks and datasets outside direct robot-memory evaluation.
 
 | Paper | Link | Pub. & Date | TL;DR |
 |:---|:---:|:---:|:---|
+| [Correct Answers from Insufficient Histories: A Controlled Study of Agent Memory Evaluation](https://arxiv.org/abs/2611.11840v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2611.11840v1) | arXiv<br>2026-11-09 | Constructs indistinguishable visible histories with different answers to test evidence sufficiency and abstention. |
 | [Harness the Memory: A Holistic Evaluation of Memory Substrates in Memory Agents](https://arxiv.org/abs/2608.15008v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2608.15008v1) | arXiv<br>2026-08-15 | Compares memory substrates under a shared harness across retrieval ranges and task regimes. |
 | [LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues](https://arxiv.org/abs/2605.12493v1) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2605.12493v1) | arXiv<br>2026-05-12 | Evaluates experience about web environments, workflows, pitfalls, and task premises through evidence-based questions. |
 | [Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions](https://arxiv.org/abs/2507.05257v4) | [![Paper](assets/link-paper.svg)](https://arxiv.org/abs/2507.05257v4) | arXiv<br>2025-07-07 | Tests retrieval, test-time learning, long-range understanding, and selective forgetting through incremental interactions. |

@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-14",
   "original_cutoff": "2026-10-31",
-  "research_works": 640,
+  "research_works": 711,
   "implementation_records": 34,
   "pending_references": 22,
   "original_research_works": 275,
@@ -28,7 +28,18 @@
     "context": 81,
     "survey": 2
   },
-  "targeted_followup_date": "2026-11-07",
-  "targeted_followup_new_papers": 1,
-  "targeted_followup_new_code_methods": 3
+  "targeted_followup_date": "2026-11-14",
+  "targeted_followup_new_papers": 71,
+  "targeted_followup_new_code_methods": 3,
+  "targeted_followup_updated_papers": 2,
+  "refresh_history": [
+    {
+      "date": "2026-11-14",
+      "previous_research_works": 640,
+      "new_research_works": 71,
+      "updated_versions": 2,
+      "search_candidates": 543,
+      "scope": "Targeted arXiv query, author primary sources, and backward citation discovery; not exhaustive."
+    }
+  ]
 }

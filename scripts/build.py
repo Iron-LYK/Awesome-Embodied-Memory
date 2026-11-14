@@ -35,7 +35,7 @@ def build_readme(papers,impl,tax,meta,project,paths,l='en'):
  out=[];put=out.append;web=project.get('website_url') or 'website/index.html'
  put('# Awesome-Embodied-Memory\n\n**Remember the world. Carry the past. Act on experience.**\n')
  put('An open map of memory in **World Models & WAM, VLA, and Agentic Robotics**. Find the system first, then the mechanism that carries its history into prediction or action.\n')
- put(f'For more detail, search and explore our 🌐 [interactive website]({web}), which we will continue to update.\n')
+ put(f'**For more detail**, search and explore our 🌐 [interactive website]({web}), which we will continue to update.\n')
  put('<a id="memory-map"></a>\n\n## 🧭 The embodied memory map\n')
  put(f'[![Four perspectives on embodied memory: WAM, VLA, Agentic Robotics and Supporting Foundations](assets/memory-map.svg)]({web})\n')
  put('| Domain | The memory question | Method families | Papers & reports |\n|:---|:---|:---|---:|')
@@ -128,6 +128,7 @@ def main():
   if (ROOT/f).exists():shutil.copy2(ROOT/f,resource/f)
  for f in (ROOT/'docs').glob('*.md'):
   if f.name not in ['README.md','README.zh-CN.md']:(resource/f.name).write_text(f.read_text().replace('(../data/','(../assets/').replace('(../NOTICE.md)','(NOTICE.md)'),encoding='utf-8')
+ for f in (ROOT/'docs').glob('refresh-*.json'):shutil.copy2(f,resource/f.name)
  for pattern in ['*.png','*.gif','*.jpg']:
   for figure in (ROOT/'docs').glob(pattern):shutil.copy2(figure,resource/figure.name)
  for f in ['README.md']:

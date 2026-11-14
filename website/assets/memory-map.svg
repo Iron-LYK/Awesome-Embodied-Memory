@@ -14,7 +14,7 @@
 <text x="122" y="206" font-size="27" fill="#366a8a" font-weight="650" text-anchor="start" >World Models &amp; WAM</text>
 <text x="605" y="243" font-size="25" fill="#366a8a" font-weight="600" text-anchor="end" >07</text>
 <text x="605" y="266" font-size="12" fill="#366a8a" font-weight="500" text-anchor="end" letter-spacing="1.2">FAMILIES</text>
-<text x="70" y="263" font-size="42" fill="#366a8a" font-weight="650" text-anchor="start" >236</text>
+<text x="70" y="263" font-size="42" fill="#366a8a" font-weight="650" text-anchor="start" >246</text>
 <text x="172" y="261" font-size="17" fill="#60747a" font-weight="400" text-anchor="start" >papers &amp; reports</text>
 <text x="350" y="263" font-size="27" fill="#366a8a" font-weight="600" text-anchor="start" >+6</text>
 <text x="405" y="261" font-size="16" fill="#60747a" font-weight="400" text-anchor="start" >pre-publication</text>
@@ -55,7 +55,7 @@
 <text x="842" y="206" font-size="27" fill="#317867" font-weight="650" text-anchor="start" >VLA</text>
 <text x="1325" y="243" font-size="25" fill="#317867" font-weight="600" text-anchor="end" >07</text>
 <text x="1325" y="266" font-size="12" fill="#317867" font-weight="500" text-anchor="end" letter-spacing="1.2">FAMILIES</text>
-<text x="790" y="263" font-size="42" fill="#317867" font-weight="650" text-anchor="start" >203</text>
+<text x="790" y="263" font-size="42" fill="#317867" font-weight="650" text-anchor="start" >211</text>
 <text x="892" y="261" font-size="17" fill="#60747a" font-weight="400" text-anchor="start" >papers &amp; reports</text>
 <text x="1070" y="263" font-size="27" fill="#317867" font-weight="600" text-anchor="start" >+6</text>
 <text x="1125" y="261" font-size="16" fill="#60747a" font-weight="400" text-anchor="start" >pre-publication</text>
@@ -96,7 +96,7 @@
 <text x="122" y="716" font-size="27" fill="#976c35" font-weight="650" text-anchor="start" >Agentic Robotics</text>
 <text x="605" y="753" font-size="25" fill="#976c35" font-weight="600" text-anchor="end" >06</text>
 <text x="605" y="776" font-size="12" fill="#976c35" font-weight="500" text-anchor="end" letter-spacing="1.2">FAMILIES</text>
-<text x="70" y="773" font-size="42" fill="#976c35" font-weight="650" text-anchor="start" >157</text>
+<text x="70" y="773" font-size="42" fill="#976c35" font-weight="650" text-anchor="start" >199</text>
 <text x="172" y="771" font-size="17" fill="#60747a" font-weight="400" text-anchor="start" >papers &amp; reports</text>
 <text x="350" y="773" font-size="27" fill="#976c35" font-weight="600" text-anchor="start" >+10</text>
 <text x="405" y="771" font-size="16" fill="#60747a" font-weight="400" text-anchor="start" >pre-publication</text>
@@ -134,7 +134,7 @@
 <text x="882" y="716" font-size="27" fill="#746687" font-weight="650" text-anchor="start" >Supporting Foundations</text>
 <text x="1325" y="753" font-size="25" fill="#746687" font-weight="600" text-anchor="end" >04</text>
 <text x="1325" y="776" font-size="12" fill="#746687" font-weight="500" text-anchor="end" letter-spacing="1.2">FAMILIES</text>
-<text x="790" y="773" font-size="42" fill="#746687" font-weight="650" text-anchor="start" >44</text>
+<text x="790" y="773" font-size="42" fill="#746687" font-weight="650" text-anchor="start" >55</text>
 <text x="892" y="771" font-size="17" fill="#60747a" font-weight="400" text-anchor="start" >papers &amp; reports</text>
 <text x="1070" y="773" font-size="17" fill="#60747a" font-weight="500" text-anchor="start" >Cross-domain</text>
 <g data-category="foundations--architectures">
@@ -179,6 +179,6 @@
 <text x="700" y="633" font-size="23" fill="#f4fbf9" font-weight="600" text-anchor="middle" letter-spacing="2">EMBODIED</text>
 <text x="700" y="662" font-size="20" fill="#b8d9dd" font-weight="500" text-anchor="middle" letter-spacing="1.2">MEMORY MAP</text>
 <path d="M50 1090h1300" stroke="#d8e0de"/>
-<text x="50" y="1124" font-size="19" fill="#21363e" font-weight="500" text-anchor="start" >640 papers &amp; reports   +   22 pre-publication methods   ·   24 method families</text>
-<text x="1350" y="1124" font-size="16" fill="#60747a" font-weight="500" text-anchor="end" >UPDATED 2026-11-07</text>
+<text x="50" y="1124" font-size="19" fill="#21363e" font-weight="500" text-anchor="start" >711 papers &amp; reports   +   22 pre-publication methods   ·   24 method families</text>
+<text x="1350" y="1124" font-size="16" fill="#60747a" font-weight="500" text-anchor="end" >UPDATED 2026-11-14</text>
 </g></svg>

@@ -1,22 +1,22 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-14",
   "baseline_works": 287,
-  "added_works": 352,
-  "total_research_works": 639,
-  "implementation_observations": 29,
-  "supporting_foundations": 44,
+  "added_works": 424,
+  "total_research_works": 711,
+  "implementation_observations": 34,
+  "supporting_foundations": 55,
   "roles": {
-    "context": 148,
-    "primary": 485,
-    "survey": 6
+    "context": 160,
+    "primary": 542,
+    "survey": 9
   },
   "primary_domains": {
-    "foundations": 44,
-    "agentic-robotics": 157,
-    "world-models": 235,
-    "vla": 203
+    "foundations": 55,
+    "agentic-robotics": 199,
+    "world-models": 246,
+    "vla": 211
   },
   "deduplication": [],
-  "screening_depth": "All expansion records: official primary metadata and complete abstract inspected. No claim of new full-text review. Original review-depth records are preserved.",
+  "screening_depth": "Historical review depths retained. Refresh: complete primary abstracts for new records; selected method/evaluation/limitation passages for flagged records. No experiment reproduction.",
   "scope": "Domain-first purposive extension. Source candidates overlap across searches; per-search retrieval counts are not an overall systematic-review flow diagram."
 }

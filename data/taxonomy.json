@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "updated": "2026-11-02",
-  "basis": "Domain first; dominant memory interface second; orthogonal mechanism tags and six evidence axes. The living catalogue is distinct from the fixed manuscript corpus.",
+  "updated": "2026-11-14",
+  "basis": "Domain first; dominant memory interface second. Orthogonal mechanism tags and six evidence axes. A dated snapshot is used in the companion manuscript.",
   "groups": [
     {
       "id": "world-models",

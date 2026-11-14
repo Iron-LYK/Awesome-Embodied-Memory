@@ -1,18 +1,18 @@
 {
   "status": "PASS",
-  "research_works": 640,
+  "research_works": 711,
   "implementation_records": 34,
   "pending_references": 22,
   "primary_domains": {
-    "foundations": 44,
-    "agentic-robotics": 157,
-    "world-models": 236,
-    "vla": 203
+    "foundations": 55,
+    "agentic-robotics": 199,
+    "world-models": 246,
+    "vla": 211
   },
   "roles": {
-    "context": 148,
-    "primary": 486,
-    "survey": 6
+    "context": 160,
+    "primary": 542,
+    "survey": 9
   },
   "method_families": 24,
   "checks": [
